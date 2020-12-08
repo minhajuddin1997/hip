@@ -44,6 +44,10 @@
             }
             .wt-header .wt-navigationarea .wt-userlogedin .wt-username span,
             .wt-header .wt-navigationarea .wt-userlogedin .wt-username h3 {color: {{$menu_text_color}} };
+
+        /*    Css By Afshal Start*/
+
+        /*    Css By Afshal End*/
         </style>
     @endpush
     @auth
@@ -269,7 +273,7 @@
             </header>
         @endif
     @else
-        <header id="wt-header" class="wt-header wt-haslayout {{$inner_header}}">
+        <header id="wt-header" class="wt-header admin wt-haslayout {{$inner_header}}">
             <div class="wt-navigationarea">
                 <div class="container-fluid">
                     <div class="row">

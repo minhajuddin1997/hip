@@ -10,7 +10,7 @@
 @section('header')
     @if (file_exists(resource_path('views/extend/includes/header.blade.php')))
         @include('extend.back-end.includes.header')
-    @else 
+    @else
         @include('back-end.includes.header')
     @endif
 @endsection

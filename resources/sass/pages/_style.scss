@@ -1,0 +1,71 @@
+/*freelance page*/
+.wt-featured
+{
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+.wt-formbannervtwo {
+  display: none;
+}
+.wt-bannercontentseven .wt-searchbtn {
+  background: #00C0FF;
+}
+.wt-featuredtag {
+  border-top: 0 !important;
+}
+.wt-headervthhree .wt-navigationarea
+{
+  position: absolute;
+  border-bottom: 0;
+}
+.wt-categoriesslider-holder .wt-title h2
+{
+  font-weight: 700 !important;
+}
+.wt-header .wt-navigationarea .wt-userlogedin .wt-username span, .wt-header .wt-navigationarea .wt-userlogedin .wt-username h3 {
+  color: #fff !important;
+}
+/*end*/
+
+/*header*/
+.wt-header .wt-navigation>ul>.menu-item-has-children:after, .wt-header .wt-navigation > ul > li > a {
+  color: #fff !important;
+}
+.wt-navigation > ul > li.current-menu-item > a, .wt-navigation ul li .sub-menu > li:hover > a, .wt-navigation > ul > li:hover > a {
+  color: #00C0FF !important;
+}
+.wt-header .wt-navigationarea .wt-navigation > ul > li > a:after
+{
+  background: transparent linear-gradient(90deg, #00C0FF 0%, #4218B8 100%) 0% 0% no-repeat padding-box !important;
+}
+@media only screen and (max-width: 1024px)
+{
+  .navbar-toggler
+  {
+    padding: 0.4rem 0.75rem;
+    margin: 21px auto;
+    color: #fff;
+  }
+  .wt-header .wt-navigation > ul > li > a {
+    color: #000000 !important;
+    padding: 6px 0px 8px 7px;
+  }
+  .wt-navigation > ul {
+    width: 100%;
+    float: left;
+    list-style: none;
+    text-align: center;
+    line-height: inherit;
+    background: #fff;
+    color: #000;
+  }
+  .wt-header .wt-navigation>ul>.menu-item-has-children:after{
+    color: #000 !important;
+  }
+}
+/*end*/
+/*footer*/
+.wt-footerbottom
+{
+  display: none !important;
+}
+/*end*/

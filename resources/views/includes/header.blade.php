@@ -25,13 +25,13 @@
                     $page_id = !empty($selected_page) ? $selected_page->id : '';
                     $slider = Helper::getPageSlider($page_id);
                     $page_header = Helper::getPageHeader($page_id);
-                    $page_header_styling = !empty($selected_page) && !empty($selected_page->metaValue('header_styling')) 
-                                            ? Helper::getUnserializeData($selected_page->metaValue('header_styling')['meta_value']) 
+                    $page_header_styling = !empty($selected_page) && !empty($selected_page->metaValue('header_styling'))
+                                            ? Helper::getUnserializeData($selected_page->metaValue('header_styling')['meta_value'])
                                             :'';
                     $selected_logo = !empty($page_header_styling) && !empty($page_header_styling['logo']) ? 'uploads/pages/'.$page_id .'/'.$page_header_styling['logo'] : '';
                     $selected_menu_color = !empty($page_header_styling) && !empty($page_header_styling['menuColor']) ? $page_header_styling['menuColor'] : '';
-                    $selected_menu_hover_color = !empty($page_header_styling) && !empty($page_header_styling['menuHoverColor']) ? $page_header_styling['menuHoverColor'] : '';    
-                    $selected_color =  !empty($page_header_styling) && !empty($page_header_styling['color']) ? $page_header_styling['color'] : '';  
+                    $selected_menu_hover_color = !empty($page_header_styling) && !empty($page_header_styling['menuHoverColor']) ? $page_header_styling['menuHoverColor'] : '';
+                    $selected_color =  !empty($page_header_styling) && !empty($page_header_styling['color']) ? $page_header_styling['color'] : '';
                 } elseif (Request::segment(1) == 'search-results') {
                     $inner_page  = App\SiteManagement::getMetaValue('inner_page_data');
                     if (!empty($_GET['type'])) {
@@ -39,36 +39,36 @@
                             $header_styling = !empty($inner_page) && !empty($inner_page[0]['freelancer_header_styling']) ? $inner_page[0]['freelancer_header_styling'] : 'false';
                             if ($header_styling == 'true') {
                                 $selected_menu_color = !empty($inner_page) && !empty($inner_page[0]['f_menu_color']) ? $inner_page[0]['f_menu_color'] : '';
-                                $selected_menu_hover_color = !empty($inner_page) && !empty($inner_page[0]['f_hover_color']) ? $inner_page[0]['f_hover_color'] : '';    
-                                $selected_color = !empty($inner_page) && !empty($inner_page[0]['f_menu_text_color']) ? $inner_page[0]['f_menu_text_color'] : '';  
-                                $selected_logo = !empty($inner_page) && !empty($inner_page[0]['f_logo']) ? 'uploads/settings/general/'.$inner_page[0]['f_logo'] : '';  
+                                $selected_menu_hover_color = !empty($inner_page) && !empty($inner_page[0]['f_hover_color']) ? $inner_page[0]['f_hover_color'] : '';
+                                $selected_color = !empty($inner_page) && !empty($inner_page[0]['f_menu_text_color']) ? $inner_page[0]['f_menu_text_color'] : '';
+                                $selected_logo = !empty($inner_page) && !empty($inner_page[0]['f_logo']) ? 'uploads/settings/general/'.$inner_page[0]['f_logo'] : '';
                             }
                             $page_header = !empty($inner_page) && !empty($inner_page[0]['f_header_style']) ? $inner_page[0]['f_header_style'] : '';
                         } elseif ($_GET['type'] == 'employer') {
                             $header_styling = !empty($inner_page) && !empty($inner_page[0]['employer_header_styling']) ? $inner_page[0]['employer_header_styling'] : 'false';
                             if ($header_styling == 'true') {
                                 $selected_menu_color = !empty($inner_page) && !empty($inner_page[0]['e_menu_color']) ? $inner_page[0]['e_menu_color'] : '';
-                                $selected_menu_hover_color = !empty($inner_page) && !empty($inner_page[0]['e_hover_color']) ? $inner_page[0]['e_hover_color'] : '';    
-                                $selected_color = !empty($inner_page) && !empty($inner_page[0]['e_menu_text_color']) ? $inner_page[0]['e_menu_text_color'] : '';  
-                                $selected_logo = !empty($inner_page) && !empty($inner_page[0]['e_logo']) ? 'uploads/settings/general/'.$inner_page[0]['e_logo'] : '';  
+                                $selected_menu_hover_color = !empty($inner_page) && !empty($inner_page[0]['e_hover_color']) ? $inner_page[0]['e_hover_color'] : '';
+                                $selected_color = !empty($inner_page) && !empty($inner_page[0]['e_menu_text_color']) ? $inner_page[0]['e_menu_text_color'] : '';
+                                $selected_logo = !empty($inner_page) && !empty($inner_page[0]['e_logo']) ? 'uploads/settings/general/'.$inner_page[0]['e_logo'] : '';
                             }
                             $page_header = !empty($inner_page) && !empty($inner_page[0]['emp_header_style']) ? $inner_page[0]['emp_header_style'] : '';
                         } elseif ($_GET['type'] == 'job') {
                             $header_styling = !empty($inner_page) && !empty($inner_page[0]['job_header_styling']) ? $inner_page[0]['job_header_styling'] : 'false';
                             if ($header_styling == 'true') {
                                 $selected_menu_color = !empty($inner_page) && !empty($inner_page[0]['job_menu_color']) ? $inner_page[0]['job_menu_color'] : '';
-                                $selected_menu_hover_color = !empty($inner_page) && !empty($inner_page[0]['job_hover_color']) ? $inner_page[0]['job_hover_color'] : '';    
-                                $selected_color = !empty($inner_page) && !empty($inner_page[0]['job_menu_text_color']) ? $inner_page[0]['job_menu_text_color'] : '';  
-                                $selected_logo = !empty($inner_page) && !empty($inner_page[0]['job_logo']) ? 'uploads/settings/general/'.$inner_page[0]['job_logo'] : '';  
+                                $selected_menu_hover_color = !empty($inner_page) && !empty($inner_page[0]['job_hover_color']) ? $inner_page[0]['job_hover_color'] : '';
+                                $selected_color = !empty($inner_page) && !empty($inner_page[0]['job_menu_text_color']) ? $inner_page[0]['job_menu_text_color'] : '';
+                                $selected_logo = !empty($inner_page) && !empty($inner_page[0]['job_logo']) ? 'uploads/settings/general/'.$inner_page[0]['job_logo'] : '';
                             }
                             $page_header = !empty($inner_page) && !empty($inner_page[0]['job_header_style']) ? $inner_page[0]['job_header_style'] : '';
                         } elseif ($_GET['type'] == 'service') {
                             $header_styling = !empty($inner_page) && !empty($inner_page[0]['service_header_styling']) ? $inner_page[0]['service_header_styling'] : 'false';
                             if ($header_styling == 'true') {
                                 $selected_menu_color = !empty($inner_page) && !empty($inner_page[0]['service_menu_color']) ? $inner_page[0]['service_menu_color'] : '';
-                                $selected_menu_hover_color = !empty($inner_page) && !empty($inner_page[0]['service_hover_color']) ? $inner_page[0]['service_hover_color'] : '';    
-                                $selected_color = !empty($inner_page) && !empty($inner_page[0]['service_menu_text_color']) ? $inner_page[0]['service_menu_text_color'] : '';  
-                                $selected_logo = !empty($inner_page) && !empty($inner_page[0]['service_logo']) ? 'uploads/settings/general/'.$inner_page[0]['service_logo'] : '';  
+                                $selected_menu_hover_color = !empty($inner_page) && !empty($inner_page[0]['service_hover_color']) ? $inner_page[0]['service_hover_color'] : '';
+                                $selected_color = !empty($inner_page) && !empty($inner_page[0]['service_menu_text_color']) ? $inner_page[0]['service_menu_text_color'] : '';
+                                $selected_logo = !empty($inner_page) && !empty($inner_page[0]['service_logo']) ? 'uploads/settings/general/'.$inner_page[0]['service_logo'] : '';
                             }
                             $page_header = !empty($inner_page) && !empty($inner_page[0]['service_header_style']) ? $inner_page[0]['service_header_style'] : '';
                         }
@@ -78,9 +78,9 @@
                     $header_styling = !empty($inner_page) && !empty($inner_page[0]['article_header_styling']) ? $inner_page[0]['article_header_styling'] : 'false';
                     if ($header_styling == 'true') {
                         $selected_menu_color = !empty($inner_page) && !empty($inner_page[0]['article_menu_color']) ? $inner_page[0]['article_menu_color'] : '';
-                        $selected_menu_hover_color = !empty($inner_page) && !empty($inner_page[0]['article_hover_color']) ? $inner_page[0]['article_hover_color'] : '';    
-                        $selected_color = !empty($inner_page) && !empty($inner_page[0]['article_menu_text_color']) ? $inner_page[0]['article_menu_text_color'] : '';  
-                        $selected_logo = !empty($inner_page) && !empty($inner_page[0]['article_logo']) ? 'uploads/settings/general/'.$inner_page[0]['article_logo'] : '';  
+                        $selected_menu_hover_color = !empty($inner_page) && !empty($inner_page[0]['article_hover_color']) ? $inner_page[0]['article_hover_color'] : '';
+                        $selected_color = !empty($inner_page) && !empty($inner_page[0]['article_menu_text_color']) ? $inner_page[0]['article_menu_text_color'] : '';
+                        $selected_logo = !empty($inner_page) && !empty($inner_page[0]['article_logo']) ? 'uploads/settings/general/'.$inner_page[0]['article_logo'] : '';
                     }
                     $page_header = !empty($inner_page) && !empty($inner_page[0]['article_header_style']) ? $inner_page[0]['article_header_style'] : '';
                 }
@@ -111,7 +111,7 @@
                 color: {{$menu_color}};
             }
             @media (max-width: 991px) {
-                .wt-header .wt-navigation>ul>.menu-item-has-children:after, 
+                .wt-header .wt-navigation>ul>.menu-item-has-children:after,
                 .wt-header .wt-navigation > ul > li > a {
                     color:{{$menu_color =='#ffffff' ? '#767676' : $menu_color}};
                 }
@@ -130,37 +130,37 @@
     @endpush
     @if (!empty($page_header))
         @if ($page_header == 'style1')
-            @if (file_exists(resource_path('views/extend/includes/headers/header1.blade.php'))) 
+            @if (file_exists(resource_path('views/extend/includes/headers/header1.blade.php')))
                 @include('extend.includes.headers.header1', ['page_order' => $page_order])
-            @else 
+            @else
                 @include('includes.headers.header1', ['page_order' => $page_order])
             @endif
         @elseif ($page_header == 'style2')
-            @if (file_exists(resource_path('views/extend/includes/headers/header2.blade.php'))) 
+            @if (file_exists(resource_path('views/extend/includes/headers/header2.blade.php')))
                 @include('extend.includes.headers.header2', ['styling' => $page_header_styling])
-            @else 
+            @else
                 @include('includes.headers.header2', ['styling' => $page_header_styling])
             @endif
         @elseif ($page_header == 'style3')
-            @if (file_exists(resource_path('views/extend/includes/headers/header3.blade.php'))) 
+            @if (file_exists(resource_path('views/extend/includes/headers/header3.blade.php')))
                 @include('extend.includes.headers.header3', ['styling' => $page_header_styling])
-            @else 
+            @else
                 @include('includes.headers.header3', ['styling' => $page_header_styling])
             @endif
         @elseif ($page_header == 'style4')
-            @if (file_exists(resource_path('views/extend/includes/headers/header4.blade.php'))) 
+            @if (file_exists(resource_path('views/extend/includes/headers/header4.blade.php')))
                 @include('extend.includes.headers.header4', ['styling' => $page_header_styling])
-            @else 
+            @else
                 @include('includes.headers.header4', ['styling' => $page_header_styling])
-            @endif  
+            @endif
         @elseif ($page_header == 'style5')
-            @if (file_exists(resource_path('views/extend/includes/headers/header5.blade.php'))) 
+            @if (file_exists(resource_path('views/extend/includes/headers/header5.blade.php')))
                 @include('extend.includes.headers.header5', ['styling' => $page_header_styling])
-            @else 
+            @else
                 @include('includes.headers.header5', ['styling' => $page_header_styling])
-            @endif      
+            @endif
         @endif
-    @elseif (!empty($slider) && $slider['index'] == 0) 
+    @elseif (!empty($slider) && $slider['index'] == 0)
         @if (!empty($slider['style']) && $slider['style'] == 'style3')
             <header id="wt-header" class="wt-header wt-headervfour wt-haslayout">
                 <div class="wt-navigationarea">
@@ -241,17 +241,17 @@
                                                 <h3>{{{ Helper::getUserName(Auth::user()->id) }}}</h3>
                                                 <span>{{{ !empty(Auth::user()->profile->tagline) ? str_limit(Auth::user()->profile->tagline, 26, '') : Helper::getAuthRoleName() }}}</span>
                                             </div>
-                                            @if (file_exists(resource_path('views/extend/back-end/includes/profile-menu.blade.php'))) 
+                                            @if (file_exists(resource_path('views/extend/back-end/includes/profile-menu.blade.php')))
                                                 @include('extend.back-end.includes.profile-menu')
-                                            @else 
+                                            @else
                                                 @include('back-end.includes.profile-menu')
                                             @endif
                                         </div>
                                     @endauth
                                 </div>
-                                @if (file_exists(resource_path('views/extend/includes/menu.blade.php'))) 
+                                @if (file_exists(resource_path('views/extend/includes/menu.blade.php')))
                                     @include('extend.includes.menu')
-                                @else 
+                                @else
                                     @include('includes.menu')
                                 @endif
                             </div>
@@ -260,16 +260,16 @@
                 </div>
             </header>
         @else
-            @if (file_exists(resource_path('views/extend/includes/headers/header1.blade.php'))) 
+            @if (file_exists(resource_path('views/extend/includes/headers/header1.blade.php')))
                 @include('extend.includes.headers.header1', ['styling' => $page_header_styling])
-            @else 
+            @else
                 @include('includes.headers.header1', ['styling' => $page_header_styling])
             @endif
         @endif
     @else
-        @if (file_exists(resource_path('views/extend/includes/headers/header1.blade.php'))) 
+        @if (file_exists(resource_path('views/extend/includes/headers/header1.blade.php')))
             @include('extend.includes.headers.header1', ['styling' => $page_header_styling])
-        @else 
+        @else
             @include('includes.headers.header1', ['styling' => $page_header_styling])
         @endif
     @endif
