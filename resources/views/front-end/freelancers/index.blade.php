@@ -203,7 +203,9 @@
                 loop:true,
                 nav:false,
                 margin: 0,
-                autoplay:false,
+                autoplay:true,
+                autoplayTimeout:2000,
+                autoplayHoverPause:true,
                 center: true,
                 responsiveClass:true,
                 responsive:{
@@ -214,6 +216,7 @@
                     1760:{items:6,}
                 }
             });
+            
         </script>
     @endpush
 @endsection
