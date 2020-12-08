@@ -1127,7 +1127,7 @@
 		border-top: 1px solid #eee;
 	}
 	.sj-paymentmethod li a i{border: 0;}
-	.wt-header .wt-rightarea .wt-nav .navbar-toggler{margin-right: 3px; margin-top: 20px; }
+	.wt-header .wt-rightarea .wt-nav .navbar-toggler{margin-right:10px; }
 	.wt-username h3, .wt-username span{max-width: 120px;}
 	.wt-innerbannercontent .wt-breadcrumb{line-height: 26px;font-size: 16px;}
 	.wt-radioholder{top: 120px;width: 100%;}

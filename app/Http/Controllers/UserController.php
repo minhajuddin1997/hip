@@ -2329,11 +2329,11 @@ class UserController extends Controller
                 $projects_ids = Unserialize($request['projects_ids']);
                 $job_ids = array();
                 $service_ids = array();
-                if (isset($projects_ids['job_ids'])) {
-                    $job_ids = explode(",", $projects_ids['job_ids']);
+                if (isset($projects_ids{'job_ids'})) {
+                    $job_ids = explode(",", $projects_ids{'job_ids'});
                 }
-                if (isset($projects_ids['service_ids'])) {
-                    $service_ids = explode(",", $projects_ids['service_ids']);
+                if (isset($projects_ids{'service_ids'})) {
+                    $service_ids = explode(",", $projects_ids{'service_ids'});
                 }
                 if (!empty($job_ids)) {
                     foreach ($job_ids as $key => $id) {

@@ -101,7 +101,6 @@ strong.wt-logo img {
   display: none;
 }
 
-
 @media (max-width: 991px) {
   .wt-header .wt-navigation > ul > .menu-item-has-children:after,
   .wt-header .wt-navigation > ul > li > a {
