@@ -1,0 +1,111 @@
+.abcd.wt-btn,
+.wt-sectiontitle:after {
+  background: #000;
+}
+
+a.wt-searchbtn {
+  background: #00C0FF;
+}
+
+.fa-play:before {
+  content: "\F04B";
+  color: #00C0FF;
+}
+
+.wt-rightarea {
+  float: right;
+  margin: 25px 0 0 0;
+}
+
+.wt-logo {
+  float: left;
+  margin: auto !important;
+}
+
+.wt-navigationarea {
+  position: absolute;
+  width: 100%;
+  padding: 10px 15px;
+  /* color: #fff; */
+}
+
+strong.wt-logo img {
+  width: 100%;
+  max-width: 155px;
+  padding: 14px;
+}
+
+.wt-header .wt-navigation > ul > li > a {
+  color: #fff;
+}
+
+.abcd.wt-btn,
+.wt-sectiontitle:after {
+  background: transparent linear-gradient(90deg, #00C0FF 0%, #4218B8 100%) 0% 0% no-repeat padding-box;
+}
+
+.wt-categorycontent figure {
+  top: 75px;
+  height: 100%;
+  max-height: 75px;
+  position: absolute;
+}
+
+.wt-categorycontent img {
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+}
+
+.wt-categorycontent:hover {
+  box-shadow: 5px 10px 20px 0 rgba(0, 0, 0, 0.25);
+  background: #00C0FF1A;
+}
+
+.wt-freelanceritems .wt-userlistinghold {
+  padding: 20px;
+  border: 2px solid #B9B9B940;
+  background: #F3F3F3;
+}
+
+.wt-away {
+  background: transparent;
+}
+
+.wt-userdropdown {
+  border: none;
+}
+
+.wt-articles {
+  display: none;
+}
+
+#pages-list .wt-footeraboutus {
+  margin-top: 0;
+  display: none;
+}
+
+#pages-list .wt-innerbannerholder,
+#pages-list .wt-bannerholder {
+  margin: 0;
+  display: none;
+}
+
+.wt-switcharea {
+  display: none;
+}
+
+.wt-package-content img {
+  display: none;
+}
+
+
+@media (max-width: 991px) {
+  .wt-header .wt-navigation > ul > .menu-item-has-children:after,
+  .wt-header .wt-navigation > ul > li > a {
+    color: #000;
+  }
+}
+
