@@ -7,8 +7,7 @@
 @section('title'){{ $f_list_meta_title }} @stop
 @section('description', $f_list_meta_desc)
 @section('content')
-    @php $breadcrumbs = Breadcrumbs::generate('searchResults');
-    @endphp
+    @php $breadcrumbs = Breadcrumbs::generate('searchResults'); @endphp
     @if (file_exists(resource_path('views/extend/front-end/includes/inner-banner.blade.php')))
         @include('extend.front-end.includes.inner-banner',
             ['title' => trans('lang.freelancers'), 'inner_banner' => $f_inner_banner, 'show_banner' => $show_f_banner ]

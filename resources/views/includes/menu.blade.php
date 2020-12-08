@@ -18,28 +18,28 @@
                         $page_has_child = App\Page::pageHasChild($page->id); $pageID = Request::segment(2);
                         $show_page = \App\SiteManagement::where('meta_key', 'show-page-'.$page->id)->select('meta_value')->pluck('meta_value')->first();
                     @endphp
-                    @if ($page->relation_type == 0 && ($show_page == 'true' || $show_page == true))
-                        <li 
-                            class="{{!empty($page_has_child) ? 'menu-item-has-children page_item_has_children' : '' }} @if ($pageID == $page->slug ) current-menu-item @endif"
-                            style="{{!empty($order) ? 'order:'.$order : 'order:99' }}"
-                        >
-                            <a href="{{url('page/'.$page->slug)}}">{{{$page->title}}}</a>
-                            @if (!empty($page_has_child))
-                                <ul class="sub-menu">
-                                    @foreach($page_has_child as $parent)
-                                        @php $child = App\Page::getChildPages($parent->child_id);@endphp
-                                        @if (!empty($child))
-                                            <li class="@if ($pageID == $child->slug ) current-menu-item @endif">
-                                                <a href="{{url('page/'.$child->slug.'/')}}">
-                                                    {{{$child->title}}}
-                                                </a>
-                                            </li>
-                                        @endif
-                                    @endforeach
-                                </ul>
-                            @endif
-                        </li>
-                    @endif
+                    <!--@if ($page->relation_type == 0 && ($show_page == 'true' || $show_page == true))-->
+                    <!--    <li -->
+                    <!--        class="{{!empty($page_has_child) ? 'menu-item-has-children page_item_has_children' : '' }} @if ($pageID == $page->slug ) current-menu-item @endif"-->
+                    <!--        style="{{!empty($order) ? 'order:'.$order : 'order:99' }}"-->
+                    <!--    >-->
+                    <!--        <a href="{{url('page/'.$page->slug)}}">{{{$page->title}}}</a>-->
+                    <!--        @if (!empty($page_has_child))-->
+                    <!--            <ul class="sub-menu">-->
+                    <!--                @foreach($page_has_child as $parent)-->
+                    <!--                    @php $child = App\Page::getChildPages($parent->child_id);@endphp-->
+                    <!--                    @if (!empty($child))-->
+                    <!--                        <li class="@if ($pageID == $child->slug ) current-menu-item @endif">-->
+                    <!--                            <a href="{{url('page/'.$child->slug.'/')}}">-->
+                    <!--                                {{{$child->title}}}-->
+                    <!--                            </a>-->
+                    <!--                        </li>-->
+                    <!--                    @endif-->
+                    <!--                @endforeach-->
+                    <!--            </ul>-->
+                    <!--        @endif-->
+                    <!--    </li>-->
+                    <!--@endif-->
                 @endforeach
             @endif
             @php
@@ -56,13 +56,13 @@
                 $service_order = !empty($menu_settings['pages']) ? Helper::getArrayIndex($menu_settings['pages'], 'id', 'services') : ''; 
                 $article_order = !empty($menu_settings['pages']) ? Helper::getArrayIndex($menu_settings['pages'], 'id', 'articles') : ''; 
             @endphp
-            @if ($add_article_navbar !== 'false')
-                <li style="{{!empty($article_order) ? 'order:'.$article_order : 'order:99' }}">
-                    <a href="{{url('articles')}}">
-                        {{{ trans('lang.articles') }}}
-                    </a>
-                </li>
-            @endif
+            <!--@if ($add_article_navbar !== 'false')-->
+            <!--    <li style="{{!empty($article_order) ? 'order:'.$article_order : 'order:99' }}">-->
+            <!--        <a href="{{url('articles')}}">-->
+            <!--            {{{ trans('lang.articles') }}}-->
+            <!--        </a>-->
+            <!--    </li>-->
+            <!--@endif-->
             @if ($add_f_navbar !== 'false')
                 <li style="{{!empty($freelancer_order) ? 'order:'.$freelancer_order : 'order:99' }}">
                     <a href="{{url('search-results?type=freelancer')}}">
@@ -70,13 +70,13 @@
                     </a>
                 </li>
             @endif
-            @if ($add_emp_navbar !== 'false')
-            <li style="{{!empty($employer_order) ? 'order:'.$employer_order : 'order:99' }}">
-                <a href="{{url('search-results?type=employer')}}">
-                    {{{ trans('lang.view_employers') }}}
-                </a>
-            </li>
-            @endif
+            <!--@if ($add_emp_navbar !== 'false')-->
+            <!--<li style="{{!empty($employer_order) ? 'order:'.$employer_order : 'order:99' }}">-->
+            <!--    <a href="{{url('search-results?type=employer')}}">-->
+            <!--        {{{ trans('lang.view_employers') }}}-->
+            <!--    </a>-->
+            <!--</li>-->
+            <!--@endif-->
             @if ($add_job_navbar !== 'false')
                 @if ($type =='jobs' || $type == 'both')
                     <li style="{{!empty($job_order) ? 'order:'.$job_order : 'order:99' }}">

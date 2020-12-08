@@ -1,9 +1,10 @@
 <footer id="wt-footer" class="wt-footer wt-haslayout">
     @if (!empty($footer))
+    
         <div class="wt-footerholder wt-haslayout">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-5">
                         <div class="wt-footerlogohold">
                             @if (!empty($footer['footer_logo']))
                                 <strong class="wt-logo"><a href="{{{ url('/') }}}"><img src="{{{ asset(\App\Helper::getFooterLogo($footer['footer_logo'])) }}}" alt="company logo here"></a></strong>
@@ -17,7 +18,8 @@
                         </div>
                     </div>
                     @if (!empty($footer['menu_title_1']) || !empty($footer['menu_pages_1']))
-                        <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                    
+                        <div class="col-12 col-sm-6 col-md-2 col-lg-3">
                             <div class="wt-footercol wt-widgetcompany">
                                 @if (!empty($footer['menu_title_1']))
                                     <div class="wt-fwidgettitle">
@@ -37,22 +39,35 @@
                             </div>
                         </div>
                     @endif
-                    @if (!empty($search_menu) || !empty($menu_title))
-                        <div class="col-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="wt-footercol wt-widgetcompany">
-                                @if (!empty($menu_title))
-                                    <div class="wt-fwidgettitle">
-                                        <h3>{{ $menu_title->meta_value }}</h3>
-                                    </div>
-                                @endif
-                                <ul class="wt-fwidgetcontent">
-                                    @foreach($search_menu as $key => $page)
-                                        <li><a href="{!! url($page['url']) !!}">{{$page['title']}}</a></li>
-                                    @endforeach
-                                </ul>
-                            </div>
+                    @if(true)
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="footer-mail">
+                            <h3>Sign Up for Newsletter</h3>
+                            <form>
+                                <input type="email" id="email" name="email" placeholder="Email" autocomplete="off">
+                                <button type="submit" class="btn btn-sm btn-primary">Send</button>
+                            </form>
                         </div>
+                        
+                    </div>
                     @endif
+                    
+                    <!--@if (!empty($search_menu) || !empty($menu_title))-->
+                    <!--    <div class="col-12 col-sm-6 col-md-3 col-lg-3">-->
+                    <!--        <div class="wt-footercol wt-widgetcompany">-->
+                    <!--            @if (!empty($menu_title))-->
+                    <!--                <div class="wt-fwidgettitle">-->
+                    <!--                    <h3>{{ $menu_title->meta_value }}</h3>-->
+                    <!--                </div>-->
+                    <!--            @endif-->
+                    <!--            <ul class="wt-fwidgetcontent">-->
+                    <!--                @foreach($search_menu as $key => $page)-->
+                    <!--                    <li><a href="{!! url($page['url']) !!}">{{$page['title']}}</a></li>-->
+                    <!--                @endforeach-->
+                    <!--            </ul>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--@endif-->
                 </div>
             </div>
         </div>

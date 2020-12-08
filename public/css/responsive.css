@@ -620,6 +620,7 @@
 	.sj-paymentmethod li{width: 100%;}
 	.sj-paymentmethod li + li{margin-top:10px;}
 	.wt-categoryvthree li {width: 50%;}
+	.footer-mail {margin: 25px auto;}
 }
 @media (max-width:767px){
 	.wt-bannerthree-title{display: none;}
