@@ -4820,7 +4820,7 @@ body.wt-login .wt-userlogedin{display: block;}
 .wt-footerlogohold > .wt-description > p{
 	color: #ccc;
 	font-size: 16px;
-	margin: 0 0 26px;
+	margin: 0 11px 26px;
 	line-height: 26px;
 }
 .wt-footerlogohold .wt-description p a{
@@ -11242,4 +11242,17 @@ section.packages-bg.wt-main-section.wt-packages-wrap
 }
 .wt-header.admin.wt-haslayout.wt-headervtwo {
     margin-bottom: 100px;
+}
+.wt-navigationarea.nav-1 {
+    background: #323232;
+    position: relative;
+}
+@media only screen and (max-width: 1024px){
+.wt-navigation>ul {
+    background: transparent;
+}
+.wt-header .wt-navigation>ul>li>a {
+    color: #fff !important;
+    padding: 6px 0 8px 7px;
+}
 }

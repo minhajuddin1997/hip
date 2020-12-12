@@ -45,6 +45,15 @@
         div#wt-innerbannerholdertwo {
             background-image: url("{{ asset('images/Group-260.png') }}") !important;
         }
+    @media only screen and (max-width: 1024px){
+        .wt-navigation>ul {
+            background: transparent;
+            }
+        .wt-header .wt-navigation>ul>li>a {
+            color: #fff!important;
+            padding: 6px 0 8px 7px;
+        }
+    }
     </style>
     @stack('stylesheets')
     <script type="text/javascript">

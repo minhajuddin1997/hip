@@ -81,26 +81,6 @@
             </div>
         </div>
         <div class="wt-widget wt-effectiveholder">
-            <div class="wt-widgettitle">
-                <h2>{{ trans('lang.english_level') }}</h2>
-            </div>
-            <div class="wt-widgetcontent">
-                <div class="wt-formtheme wt-formsearch">
-                    <fieldset>
-                        <div class="wt-checkboxholder wt-verticalscrollbar">
-                            @foreach (Helper::getEnglishLevelList() as $key => $english_level)
-                                @php $checked = ( !empty($_GET['english_level']) && in_array($key, $_GET['english_level'])) ? 'checked' : '' @endphp
-                                <span class="wt-checkbox">
-                                    <input id="rate-{{ $key }}" type="checkbox" name="english_level[]" value="{{ $key }}" {{ $checked }}>
-                                    
-                                </span>
-                            @endforeach
-                        </div>
-                    </fieldset>
-                </div>
-            </div>
-        </div>
-        <div class="wt-widget wt-effectiveholder">
             <div class="wt-widgetcontent">
                 <div class="wt-applyfilters">
                     <span>{{ trans('lang.apply_filter') }}<br> {{ trans('lang.changes_by_you') }}</span>

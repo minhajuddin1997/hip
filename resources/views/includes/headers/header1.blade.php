@@ -1,5 +1,5 @@
 <header id="wt-header" class="wt-header wt-haslayout wt-headervtwo">
-    <div class="wt-navigationarea">
+    <div class="wt-navigationarea @if(request()->segment(1) === 'page') nav-1 @endif">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
