@@ -58,6 +58,7 @@
     background: #fff;
     color: #000;
   }
+
   .wt-header .wt-navigation>ul>.menu-item-has-children:after{
     color: #000 !important;
   }
@@ -69,3 +70,24 @@
   display: none !important;
 }
 /*end*/
+
+// By Nabeel Baig
+.wt-registerheader {
+  float: left;
+  width: 100%;
+  padding: 20px 20px 0;
+
+  a {
+    color: #ddd;
+    float: right;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  a:hover {
+    color: #00c0ff;
+  }
+}
+.startAs {
+  padding: 0px !important;
+  margin: 10px auto !important;
+}

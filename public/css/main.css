@@ -1798,7 +1798,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	display: block;
 }
 /* Inner Header Form Style */
-.wt-headervtwo .wt-navigationarea .wt-logo{border-right: 1px solid #ddd;padding-right:30px; }
+.wt-headervtwo .wt-navigationarea .wt-logo{border-right: none;padding-right:30px; }
 .wt-formbannervtwo{
 	width: auto;
 	margin: 13px 0 13px 30px;
@@ -11201,4 +11201,13 @@ section.whip.wt-haslayout.wt-main-section {
 }
 section.whip.wt-haslayout.wt-main-section h2 {
 	color: #fff !important;
+}
+.wt-navigationarea.admin {
+	background: #000 !important;
+	padding: 0px 15px !important;
+}
+strong.wt-logo.admin-logo {
+	width: 100%;
+	max-width: 155px;
+	padding: 0px;
 }

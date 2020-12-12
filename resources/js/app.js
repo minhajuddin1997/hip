@@ -180,7 +180,13 @@ jQuery(document).ready(function () {
 
     jQuery('#wt-loginbtn, .wt-loginheader a').on('click', function (event) {
         event.preventDefault();
-        jQuery('.wt-loginarea .wt-loginformhold').slideToggle();
+        jQuery('#joinNow').slideUp();
+        jQuery('#signIn').slideToggle();
+    });
+    jQuery('#wt-registerbtn,.wt-registerheader a').on('click', function (event) {
+        event.preventDefault();
+        jQuery('#signIn').slideUp();
+        jQuery('#joinNow').slideToggle();
     });
 
     if (jQuery('#wt-btnmenutoggle').length > 0) {

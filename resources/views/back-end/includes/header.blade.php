@@ -45,9 +45,7 @@
             .wt-header .wt-navigationarea .wt-userlogedin .wt-username span,
             .wt-header .wt-navigationarea .wt-userlogedin .wt-username h3 {color: {{$menu_text_color}} };
 
-        /*    Css By Afshal Start*/
 
-        /*    Css By Afshal End*/
         </style>
     @endpush
     @auth
@@ -273,8 +271,8 @@
             </header>
         @endif
     @else
-        <header id="wt-header" class="wt-header admin wt-haslayout {{$inner_header}}">
-            <div class="wt-navigationarea">
+        <header id="wt-header" class="wt-header wt-haslayout {{$inner_header}}">
+            <div class="wt-navigationarea admin">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -282,7 +280,7 @@
                                 {{ Helper::displayEmailWarning() }}
                             @endauth
                             @if (!empty($logo) || Schema::hasTable('site_managements'))
-                                <strong class="wt-logo"><a href="{{{ url('/') }}}"><img src="{{{ asset($logo) }}}" alt="{{{ trans('Logo') }}}"></a></strong>
+                                        <strong class="wt-logo admin-logo"><a href="{{{ url('/') }}}"><img src="{{{ asset($logo) }}}" alt="{{{ trans('Logo') }}}"></a></strong>
                             @endif
                             @if (!empty(Route::getCurrentRoute()) && Route::getCurrentRoute()->uri() != '/' && Route::getCurrentRoute()->uri() != 'home')
                                 <search-form

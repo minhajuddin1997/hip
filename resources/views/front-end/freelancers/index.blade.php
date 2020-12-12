@@ -67,6 +67,7 @@
                                     @endif
                                 </div>
                                 @if (!empty($users))
+
                                     @foreach ($users as $key => $freelancer)
                                         @php
                                             $user_image = !empty($freelancer->profile->avater) ?
@@ -200,14 +201,12 @@
 
             jQuery("#wt-categoriesslider").owlCarousel({
                 item: 6,
-                rtl:direction,
                 loop:true,
                 nav:false,
-                margin: 0,
+                margin:0,
                 autoplay:true,
                 autoplayTimeout:2000,
                 autoplayHoverPause:true,
-                center: true,
                 responsiveClass:true,
                 responsive:{
                     0:{items:1,},
@@ -217,7 +216,6 @@
                     1760:{items:6,}
                 }
             });
-            
         </script>
     @endpush
 @endsection

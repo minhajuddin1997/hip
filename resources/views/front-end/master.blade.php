@@ -1,8 +1,7 @@
 @extends('master')
-@push('stylesheets')
+{{--@push('stylesheets')
 
-@endpush
-
+@endpush--}}
 @push('PackageStyle')
     <link href="{{ asset('css/dd.css') }}" rel="stylesheet">
 @endpush
