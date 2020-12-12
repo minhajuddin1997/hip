@@ -1,6 +1,6 @@
 @if (Schema::hasTable('users'))
     @php
-    $inner_header = '';
+        $inner_header = '';
     @endphp
     @if (Schema::hasTable('pages') || Schema::hasTable('site_managements'))
         @php
@@ -44,16 +44,14 @@
             }
             .wt-header .wt-navigationarea .wt-userlogedin .wt-username span,
             .wt-header .wt-navigationarea .wt-userlogedin .wt-username h3 {color: {{$menu_text_color}} };
-
-        /*    Css By Afshal Start*/
-
-        /*    Css By Afshal End*/
+            /*    Css By Afshal Start*/
+            /*    Css By Afshal End*/
         </style>
     @endpush
     @auth
         {{Helper::displayVerificationWarning()}}
     @endauth
-    @if (!empty($slider) && $slider['index'] == 0) 
+    @if (!empty($slider) && $slider['index'] == 0)
         @if (!empty($slider['style']) && $slider['style'] == 'style3')
             <header id="wt-header" class="wt-header wt-headervfour wt-haslayout">
                 <div class="wt-navigationarea">
@@ -78,24 +76,24 @@
                                                         <fieldset>
                                                             <div class="form-group">
                                                                 <input id="email" type="email" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
-                                                                    placeholder="Email" required autofocus>
+                                                                       placeholder="Email" required autofocus>
                                                                 @if ($errors->has('email'))
-                                                                <span class="invalid-feedback" role="alert">
+                                                                    <span class="invalid-feedback" role="alert">
                                                                     <strong>{{ $errors->first('email') }}</strong>
                                                                 </span>
                                                                 @endif
                                                             </div>
                                                             <div class="form-group">
                                                                 <input id="password" type="password" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
-                                                                    placeholder="Password" required>
+                                                                       placeholder="Password" required>
                                                                 @if ($errors->has('password'))
-                                                                <span class="invalid-feedback" role="alert">
+                                                                    <span class="invalid-feedback" role="alert">
                                                                     <strong>{{ $errors->first('password') }}</strong>
                                                                 </span>
                                                                 @endif
                                                             </div>
                                                             <div class="wt-logininfo">
-                                                                    <button type="submit" class="wt-btn do-login-button">{{{ trans('lang.login') }}}</button>
+                                                                <button type="submit" class="wt-btn do-login-button">{{{ trans('lang.login') }}}</button>
                                                                 <span class="wt-checkbox">
                                                                     <input id="remember" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
                                                                     <label for="remember">{{{ trans('lang.remember') }}}</label>
@@ -135,17 +133,17 @@
                                                 <h3>{{{ Helper::getUserName(Auth::user()->id) }}}</h3>
                                                 <span>{{{ !empty(Auth::user()->profile->tagline) ? str_limit(Auth::user()->profile->tagline, 26, '') : Helper::getAuthRoleName() }}}</span>
                                             </div>
-                                            @if (file_exists(resource_path('views/extend/back-end/includes/profile-menu.blade.php'))) 
+                                            @if (file_exists(resource_path('views/extend/back-end/includes/profile-menu.blade.php')))
                                                 @include('extend.back-end.includes.profile-menu')
-                                            @else 
+                                            @else
                                                 @include('back-end.includes.profile-menu')
                                             @endif
                                         </div>
                                     @endauth
                                 </div>
-                                @if (file_exists(resource_path('views/extend/includes/menu.blade.php'))) 
+                                @if (file_exists(resource_path('views/extend/includes/menu.blade.php')))
                                     @include('extend.includes.menu')
-                                @else 
+                                @else
                                     @include('includes.menu')
                                 @endif
                             </div>
@@ -167,19 +165,19 @@
                                 @endif
                                 @if (!empty(Route::getCurrentRoute()) && Route::getCurrentRoute()->uri() != '/' && Route::getCurrentRoute()->uri() != 'home')
                                     <search-form
-                                    :placeholder="'{{ trans('lang.looking_for') }}'"
-                                    :freelancer_placeholder="'{{ trans('lang.search_filter_list.freelancer') }}'"
-                                    :employer_placeholder="'{{ trans('lang.search_filter_list.employers') }}'"
-                                    :job_placeholder="'{{ trans('lang.search_filter_list.jobs') }}'"
-                                    :service_placeholder="'{{ trans('lang.search_filter_list.services') }}'"
-                                    :no_record_message="'{{ trans('lang.no_record') }}'"
+                                            :placeholder="'{{ trans('lang.looking_for') }}'"
+                                            :freelancer_placeholder="'{{ trans('lang.search_filter_list.freelancer') }}'"
+                                            :employer_placeholder="'{{ trans('lang.search_filter_list.employers') }}'"
+                                            :job_placeholder="'{{ trans('lang.search_filter_list.jobs') }}'"
+                                            :service_placeholder="'{{ trans('lang.search_filter_list.services') }}'"
+                                            :no_record_message="'{{ trans('lang.no_record') }}'"
                                     >
                                     </search-form>
                                 @endif
                                 <div class="wt-rightarea">
-                                    @if (file_exists(resource_path('views/extend/includes/menu.blade.php'))) 
+                                    @if (file_exists(resource_path('views/extend/includes/menu.blade.php')))
                                         @include('extend.includes.menu')
-                                    @else 
+                                    @else
                                         @include('includes.menu')
                                     @endif
                                     @guest
@@ -196,24 +194,24 @@
                                                         <fieldset>
                                                             <div class="form-group">
                                                                 <input id="email" type="email" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
-                                                                    placeholder="Email" required autofocus>
+                                                                       placeholder="Email" required autofocus>
                                                                 @if ($errors->has('email'))
-                                                                <span class="invalid-feedback" role="alert">
+                                                                    <span class="invalid-feedback" role="alert">
                                                                     <strong>{{ $errors->first('email') }}</strong>
                                                                 </span>
                                                                 @endif
                                                             </div>
                                                             <div class="form-group">
                                                                 <input id="password" type="password" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
-                                                                    placeholder="Password" required>
+                                                                       placeholder="Password" required>
                                                                 @if ($errors->has('password'))
-                                                                <span class="invalid-feedback" role="alert">
+                                                                    <span class="invalid-feedback" role="alert">
                                                                     <strong>{{ $errors->first('password') }}</strong>
                                                                 </span>
                                                                 @endif
                                                             </div>
                                                             <div class="wt-logininfo">
-                                                                    <button type="submit" class="wt-btn do-login-button">{{{ trans('lang.login') }}}</button>
+                                                                <button type="submit" class="wt-btn do-login-button">{{{ trans('lang.login') }}}</button>
                                                                 <span class="wt-checkbox">
                                                                     <input id="remember" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
                                                                     <label for="remember">{{{ trans('lang.remember') }}}</label>
@@ -244,21 +242,21 @@
                                             $payment_module = !empty($payment_settings) && !empty($payment_settings[0]['enable_packages']) ? $payment_settings[0]['enable_packages'] : 'true';
                                             $employer_payment_module = !empty($payment_settings) && !empty($payment_settings[0]['employer_package']) ? $payment_settings[0]['employer_package'] : 'true';
                                         @endphp
-                                            <div class="wt-userlogedin">
-                                                <figure class="wt-userimg">
-                                                    {{-- <img src="{{{ asset($profile_image) }}}" alt="{{{ trans('lang.user_avatar') }}}"> --}}
-                                                    <img src="{{{ asset(Helper::getImage('uploads/users/' . Auth::user()->id, $profile->avater, '' , 'user.jpg')) }}}" alt="{{{ trans('lang.user_avatar') }}}">
-                                                </figure>
-                                                <div class="wt-username">
-                                                    <h3>{{{ Helper::getUserName(Auth::user()->id) }}}</h3>
-                                                    <span>{{{ !empty(Auth::user()->profile->tagline) ? str_limit(Auth::user()->profile->tagline, 26, '') : Helper::getAuthRoleName() }}}</span>
-                                                </div>
-                                                @if (file_exists(resource_path('views/extend/back-end/includes/profile-menu.blade.php'))) 
-                                                    @include('extend.back-end.includes.profile-menu')
-                                                @else 
-                                                    @include('back-end.includes.profile-menu')
-                                                @endif
+                                        <div class="wt-userlogedin">
+                                            <figure class="wt-userimg">
+                                                {{-- <img src="{{{ asset($profile_image) }}}" alt="{{{ trans('lang.user_avatar') }}}"> --}}
+                                                <img src="{{{ asset(Helper::getImage('uploads/users/' . Auth::user()->id, $profile->avater, '' , 'user.jpg')) }}}" alt="{{{ trans('lang.user_avatar') }}}">
+                                            </figure>
+                                            <div class="wt-username">
+                                                <h3>{{{ Helper::getUserName(Auth::user()->id) }}}</h3>
+                                                <span>{{{ !empty(Auth::user()->profile->tagline) ? str_limit(Auth::user()->profile->tagline, 26, '') : Helper::getAuthRoleName() }}}</span>
                                             </div>
+                                            @if (file_exists(resource_path('views/extend/back-end/includes/profile-menu.blade.php')))
+                                                @include('extend.back-end.includes.profile-menu')
+                                            @else
+                                                @include('back-end.includes.profile-menu')
+                                            @endif
+                                        </div>
                                     @endauth
                                     @if ($slider['style'] == 'style1')
                                         @if (!empty(Route::getCurrentRoute()) && Route::getCurrentRoute()->uri() != '/' && Route::getCurrentRoute()->uri() != 'home')
@@ -286,25 +284,25 @@
                             @endif
                             @if (!empty(Route::getCurrentRoute()) && Route::getCurrentRoute()->uri() != '/' && Route::getCurrentRoute()->uri() != 'home')
                                 <search-form
-                                :placeholder="'{{ trans('lang.looking_for') }}'"
-                                :freelancer_placeholder="'{{ trans('lang.search_filter_list.freelancer') }}'"
-                                :employer_placeholder="'{{ trans('lang.search_filter_list.employers') }}'"
-                                :job_placeholder="'{{ trans('lang.search_filter_list.jobs') }}'"
-                                :service_placeholder="'{{ trans('lang.search_filter_list.services') }}'"
-                                :no_record_message="'{{ trans('lang.no_record') }}'"
+                                        :placeholder="'{{ trans('lang.looking_for') }}'"
+                                        :freelancer_placeholder="'{{ trans('lang.search_filter_list.freelancer') }}'"
+                                        :employer_placeholder="'{{ trans('lang.search_filter_list.employers') }}'"
+                                        :job_placeholder="'{{ trans('lang.search_filter_list.jobs') }}'"
+                                        :service_placeholder="'{{ trans('lang.search_filter_list.services') }}'"
+                                        :no_record_message="'{{ trans('lang.no_record') }}'"
                                 >
                                 </search-form>
                             @endif
                             <div class="wt-rightarea">
                                 <nav id="wt-nav" class="wt-nav navbar-expand-lg">
                                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                         <i class="lnr lnr-menu"></i>
                                     </button>
                                     <div class="collapse navbar-collapse wt-navigation" id="navbarNav">
-                                        @if (file_exists(resource_path('views/extend/includes/menu.blade.php'))) 
+                                        @if (file_exists(resource_path('views/extend/includes/menu.blade.php')))
                                             @include('extend.includes.menu')
-                                        @else 
+                                        @else
                                             @include('includes.menu')
                                         @endif
                                     </div>
@@ -323,24 +321,24 @@
                                                     <fieldset>
                                                         <div class="form-group">
                                                             <input id="email" type="email" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
-                                                                placeholder="Email" required autofocus>
+                                                                   placeholder="Email" required autofocus>
                                                             @if ($errors->has('email'))
-                                                            <span class="invalid-feedback" role="alert">
+                                                                <span class="invalid-feedback" role="alert">
                                                                 <strong>{{ $errors->first('email') }}</strong>
                                                             </span>
                                                             @endif
                                                         </div>
                                                         <div class="form-group">
                                                             <input id="password" type="password" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
-                                                                placeholder="Password" required>
+                                                                   placeholder="Password" required>
                                                             @if ($errors->has('password'))
-                                                            <span class="invalid-feedback" role="alert">
+                                                                <span class="invalid-feedback" role="alert">
                                                                 <strong>{{ $errors->first('password') }}</strong>
                                                             </span>
                                                             @endif
                                                         </div>
                                                         <div class="wt-logininfo">
-                                                                <button type="submit" class="wt-btn do-login-button">{{{ trans('lang.login') }}}</button>
+                                                            <button type="submit" class="wt-btn do-login-button">{{{ trans('lang.login') }}}</button>
                                                             <span class="wt-checkbox">
                                                                 <input id="remember" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
                                                                 <label for="remember">{{{ trans('lang.remember') }}}</label>
@@ -371,21 +369,21 @@
                                         $payment_module = !empty($payment_settings) && !empty($payment_settings[0]['enable_packages']) ? $payment_settings[0]['enable_packages'] : 'true';
                                         $employer_payment_module = !empty($payment_settings) && !empty($payment_settings[0]['employer_package']) ? $payment_settings[0]['employer_package'] : 'true';
                                     @endphp
-                                        <div class="wt-userlogedin">
-                                            <figure class="wt-userimg">
-                                                {{-- <img src="{{{ asset($profile_image) }}}" alt="{{{ trans('lang.user_avatar') }}}"> --}}
-                                                <img src="{{{ asset(Helper::getImage('uploads/users/' . Auth::user()->id, $profile->avater, '' , 'user.jpg')) }}}" alt="{{{ trans('lang.user_avatar') }}}">
-                                            </figure>
-                                            <div class="wt-username">
-                                                <h3>{{{ Helper::getUserName(Auth::user()->id) }}}</h3>
-                                                <span>{{{ !empty(Auth::user()->profile->tagline) ? str_limit(Auth::user()->profile->tagline, 26, '') : Helper::getAuthRoleName() }}}</span>
-                                            </div>
-                                            @if (file_exists(resource_path('views/extend/back-end/includes/profile-menu.blade.php'))) 
-                                                @include('extend.back-end.includes.profile-menu')
-                                            @else 
-                                                @include('back-end.includes.profile-menu')
-                                            @endif
+                                    <div class="wt-userlogedin">
+                                        <figure class="wt-userimg">
+                                            {{-- <img src="{{{ asset($profile_image) }}}" alt="{{{ trans('lang.user_avatar') }}}"> --}}
+                                            <img src="{{{ asset(Helper::getImage('uploads/users/' . Auth::user()->id, $profile->avater, '' , 'user.jpg')) }}}" alt="{{{ trans('lang.user_avatar') }}}">
+                                        </figure>
+                                        <div class="wt-username">
+                                            <h3>{{{ Helper::getUserName(Auth::user()->id) }}}</h3>
+                                            <span>{{{ !empty(Auth::user()->profile->tagline) ? str_limit(Auth::user()->profile->tagline, 26, '') : Helper::getAuthRoleName() }}}</span>
                                         </div>
+                                        @if (file_exists(resource_path('views/extend/back-end/includes/profile-menu.blade.php')))
+                                            @include('extend.back-end.includes.profile-menu')
+                                        @else
+                                            @include('back-end.includes.profile-menu')
+                                        @endif
+                                    </div>
                                 @endauth
                                 @if (!empty(Route::getCurrentRoute()) && Route::getCurrentRoute()->uri() != '/' && Route::getCurrentRoute()->uri() != 'home')
                                     <div class="wt-respsonsive-search"><a href="javascript:;" class="wt-searchbtn"><i class="fa fa-search"></i></a></div>
@@ -400,4 +398,3 @@
         <br>
     @endif
 @endif
-

@@ -7,8 +7,6 @@ Version: 1.0.0
  This file contains the styling for the actual theme, this
  is the file you need to edit to change the look of the
  theme.
-
-
  This files contents are outlined below.
  01.	Theme Reset Style
  02.	Global Elements
@@ -11213,32 +11211,32 @@ strong.wt-logo.admin-logo {
 	padding: 0px;
 }
 .wt-header.admin.wt-haslayout.wt-headervtwo.wt-headerwrap {
-    margin-bottom: 120px;
+	margin-bottom: 120px;
 }
 .wt-freelanceritems .wt-userlistinghold
 {
-    height: 100% !important;
-    min-height: 460px !important;
+	height: 100% !important;
+	min-height: 460px !important;
 }
 section.packages-bg.wt-main-section.wt-packages-wrap
 {
-    background: url('../uploads/pages/5/Mask Group 9.jpg') !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    width: 100% !important;
+	background: url('../uploads/pages/5/Mask Group 9.jpg') !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	width: 100% !important;
 }
 .footer-mail h3 {
-    color: #fff;
-    font-weight: 500;
+	color: #fff;
+	font-weight: 500;
 }
 .footer-mail input {
-    width: 100%;
-    border-radius: 10px;
+	width: 100%;
+	border-radius: 10px;
 }
 .footer-mail button {
-    margin: 25px auto;
-    background: #00C0FF 0% 0% no-repeat padding-box;
-    padding: 8px 20px;
+	margin: 25px auto;
+	background: #00C0FF 0% 0% no-repeat padding-box;
+	padding: 8px 20px;
 }
 .wt-header.admin.wt-haslayout.wt-headervtwo {
     margin-bottom: 100px;
@@ -11246,13 +11244,4 @@ section.packages-bg.wt-main-section.wt-packages-wrap
 .wt-navigationarea.nav-1 {
     background: #323232;
     position: relative;
-}
-@media only screen and (max-width: 1024px){
-.wt-navigation>ul {
-    background: transparent;
-}
-.wt-header .wt-navigation>ul>li>a {
-    color: #fff !important;
-    padding: 6px 0 8px 7px;
-}
 }
