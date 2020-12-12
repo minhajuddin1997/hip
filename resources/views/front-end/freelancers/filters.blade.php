@@ -92,7 +92,7 @@
                                 @php $checked = ( !empty($_GET['english_level']) && in_array($key, $_GET['english_level'])) ? 'checked' : '' @endphp
                                 <span class="wt-checkbox">
                                     <input id="rate-{{ $key }}" type="checkbox" name="english_level[]" value="{{ $key }}" {{ $checked }}>
-                                    <label for="rate-{{ $key }}">{{ $english_level }}</label>
+                                    
                                 </span>
                             @endforeach
                         </div>

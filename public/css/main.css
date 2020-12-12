@@ -7,8 +7,6 @@ Version: 1.0.0
  This file contains the styling for the actual theme, this
  is the file you need to edit to change the look of the
  theme.
-
-
  This files contents are outlined below.
  01.	Theme Reset Style
  02.	Global Elements
@@ -715,6 +713,7 @@ li.wt-rss a { background:#ff6600; }
 .wt-description {
 	width: 100%;
 	float: left;
+	margin: 0 auto 50px;
 }
 .wt-bglight { background:#f7f7f7; }
 .wt-bgwhite { background:#fff; overflow: hidden;}
@@ -1798,7 +1797,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	display: block;
 }
 /* Inner Header Form Style */
-.wt-headervtwo .wt-navigationarea .wt-logo{border-right: none;padding-right:30px; }
+.wt-headervtwo .wt-navigationarea .wt-logo{border-right: none;padding-right:20px; }
 .wt-formbannervtwo{
 	width: auto;
 	margin: 13px 0 13px 30px;
@@ -4865,7 +4864,7 @@ body.wt-login .wt-userlogedin{display: block;}
 }
 .wt-copyrights{
 	margin:0;
-	float:left;
+	text-align:center;
 	color:#ccc;
 	font-size:14px;
 	line-height:16px;
@@ -4884,7 +4883,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	text-decoration:none;
 }
 .wt-copyrights span{color:#55acee;}
-.wt-addnav{float:right;}
+.wt-addnav{display:none;}
 .wt-addnav ul{
 	width:100%;
 	float:left;
@@ -11210,4 +11209,35 @@ strong.wt-logo.admin-logo {
 	width: 100%;
 	max-width: 155px;
 	padding: 0px;
+}
+.wt-header.admin.wt-haslayout.wt-headervtwo.wt-headerwrap {
+	margin-bottom: 120px;
+}
+.wt-freelanceritems .wt-userlistinghold
+{
+	height: 100% !important;
+	min-height: 460px !important;
+}
+section.packages-bg.wt-main-section.wt-packages-wrap
+{
+	background: url('../uploads/pages/5/Mask Group 9.jpg') !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	width: 100% !important;
+}
+.footer-mail h3 {
+	color: #fff;
+	font-weight: 500;
+}
+.footer-mail input {
+	width: 100%;
+	border-radius: 10px;
+}
+.footer-mail button {
+	margin: 25px auto;
+	background: #00C0FF 0% 0% no-repeat padding-box;
+	padding: 8px 20px;
+}
+.wt-header.admin.wt-haslayout.wt-headervtwo {
+	margin-bottom: 100px;
 }

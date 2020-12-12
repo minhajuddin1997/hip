@@ -1,4 +1,5 @@
 @if( Schema::hasTable('site_managements'))
+
     @php
         $footer = \App\SiteManagement::getMetaValue('footer_settings');
         $search_menu = \App\SiteManagement::getMetaValue('search_menu');
@@ -13,9 +14,11 @@
         } else {
             $page_id = APP\SiteManagement::getMetaValue('homepage')['home'];
         }
+        
         $page_footer = Helper::getPageFooter($page_id);
         $selected_footer = !empty($footer['footer_style']) ? $footer['footer_style'] : '';
         $role = Auth::user() ? Auth::user()->getRoleNames()[0] : '';
+        //dd($role);
     @endphp
     @if (!empty($page_footer) && $page_footer == 'style2')
         @if (file_exists(resource_path('views/extend/front-end/includes/footers/footer2.blade.php'))) 
@@ -44,12 +47,13 @@
     @else
         @if (file_exists(resource_path('views/extend/front-end/includes/footers/footer1.blade.php'))) 
             @include('extend.front-end.includes.footers.footer1')
-        @else 
+        @else
             @include('front-end.includes.footers.footer1')
         @endif
     @endif
     {{-- <footer id="wt-footer" class="wt-footer wt-haslayout">
         @if (!empty($footer))
+        
             <div class="wt-footerholder wt-haslayout">
                 <div class="container">
                     <div class="row">
@@ -112,11 +116,14 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <p class="wt-copyrights"><span>{{{ !empty($footer['copyright']) ? $footer['copyright'] : 'Worketic. All Rights Reserved. Amentotech.'  }}}</p>
+                        
                         @if(!empty($footer['pages']))
                             <nav class="wt-addnav">
                                 <ul>
                                     @foreach($footer['pages'] as $menu_page)
-                                        @php $page = \App\Page::where('id', $menu_page)->first(); @endphp
+                                        @php 
+                                            $page = \App\Page::where('id', $menu_page)->first(); 
+                                        @endphp
                                         @if (!empty($page))
                                             <li><a href="{{{ url('page/'.$page->slug) }}}">{{{ $page->title }}}</a></li>
                                         @endif
