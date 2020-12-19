@@ -25,8 +25,8 @@
                         <second-slider 
                             :page_id="{{$page['id']}}">
                         </second-slider>
-                        @elseif ($slider_style == 'style3') 
-                        <third-slider 
+                        @elseif ($slider_style == 'style3')
+                        <third-slider
                         :page_id="{{$page['id']}}">
                     </third-slider>
                     @endif
@@ -39,11 +39,11 @@
     @if ($home == false)
         @php $breadcrumbs = Breadcrumbs::generate('showPage',$page, $slug); @endphp
         @if (file_exists(resource_path('views/extend/front-end/includes/inner-banner.blade.php')))
-            @include('extend.front-end.includes.inner-banner', 
+            @include('extend.front-end.includes.inner-banner',
                 ['title' => $page['title'], 'inner_banner' => '', 'pageType' => 'showPage', 'show_banner' => $show_banner_image]
             )
         @else
-            @include('front-end.includes.inner-banner', 
+            @include('front-end.includes.inner-banner',
                 ['title' =>  $page['title'], 'inner_banner' => '', 'pageType' => 'showPage', 'show_banner' => $show_banner_image]
             )
         @endif
@@ -67,7 +67,7 @@
         @if (!empty($page))
             @if (!empty($sections))
                 <show-new-page
-                :page_id="'{{$page['id']}}'" 
+                :page_id="'{{$page['id']}}'"
                 :access_type="'{{$type}}'"
                 :symbol="'{{ !empty($symbol['symbol']) ? $symbol['symbol'] : '$' }}'"
                 :auth_role="'{{Auth::user() ? Auth::user()->getRoleNames()[0] : 'false'}}'"

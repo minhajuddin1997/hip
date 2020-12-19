@@ -40,22 +40,28 @@
         div#wt-innerbannerholdertwo {
             background-image: url("{{ asset('images/Group-260.png') }}") !important;
         }
-    @media only screen and (max-width: 1024px){
-        .wt-navigation>ul {
-            background: transparent;
+
+        @media only screen and (max-width: 1024px) {
+            .wt-navigation > ul {
+                background: transparent;
             }
-        .wt-header .wt-navigation>ul>li>a {
-            color: #fff!important;
-            padding: 6px 0 8px 7px;
+
+            .wt-header .wt-navigation > ul > li > a {
+                color: #fff !important;
+                padding: 6px 0 8px 7px;
+            }
         }
-    }
     </style>
     @stack('stylesheets')
     <script type="text/javascript">
-        var APP_URL = {!! json_encode(url('/')) !!}
-        var readmore_trans = {!! json_encode(trans('lang.read_more')) !!}
-        var less_trans = {!! json_encode(trans('lang.less')) !!}
-        var Map_key = {!! json_encode(Helper::getGoogleMapApiKey()) !!}
+        var APP_URL =
+                {!! json_encode(url('/')) !!}
+        var readmore_trans =
+                {!! json_encode(trans('lang.read_more')) !!}
+        var less_trans =
+                {!! json_encode(trans('lang.less')) !!}
+        var Map_key =
+                {!! json_encode(Helper::getGoogleMapApiKey()) !!}
         var APP_DIRECTION = {!! json_encode(Helper::getTextDirection()) !!}
     </script>
     @if (Auth::user())
@@ -111,7 +117,6 @@
         @yield('footer')
     </div>
 </div>
-<script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
 <script src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
 @yield('bootstrap_script')
 <script src="{{ asset('js/app.js') }}"></script>
@@ -125,6 +130,9 @@
         jQuery(".preloader-outer").delay(500).fadeOut();
         jQuery(".pins").delay(500).fadeOut("slow");
     });
+    $(function () {
+
+    })
 </script>
 </body>
 </html>

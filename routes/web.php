@@ -20,6 +20,8 @@ Route::fallback(
 );
 // Authentication route
 Auth::routes();
+// Signup
+Route::post('signup','UserController@signup')->name('signup');
 // Cache clear route
 Route::get(
     'cache-clear',

@@ -3,6 +3,8 @@
  * in this file.
  */
 
+import {console} from "vuedraggable/src/util/helper";
+
 require('./bootstrap');
 import Vue from 'vue';
 import BootstrapVue from 'bootstrap-vue'
@@ -182,11 +184,6 @@ jQuery(document).ready(function () {
         event.preventDefault();
         jQuery('#joinNow').slideUp();
         jQuery('#signIn').slideToggle();
-    });
-    jQuery('#wt-registerbtn,.wt-registerheader a').on('click', function (event) {
-        event.preventDefault();
-        jQuery('#signIn').slideUp();
-        jQuery('#joinNow').slideToggle();
     });
 
     if (jQuery('#wt-btnmenutoggle').length > 0) {
@@ -5269,5 +5266,24 @@ if (document.getElementById("slider-list")) {
                 })
             }
         }
+    });
+}
+let js_success = data => Vue.swal("Thank you!",data,"success");
+let js_error = data => Vue.swal("Error!",data,"error");
+if (document.getElementById("signUp")) {
+    var form = document.getElementById('signUpForm');
+    form.addEventListener('submit', event => {
+        event.preventDefault();
+        document.getElementById('signUpButton').disabled = true;
+        axios.post(APP_URL + '/signup',new FormData(form))
+            .then((response) => {
+                if (response.status === 200)
+                {
+                    window.jQuery('div#signUp button.close').trigger('click');
+                    js_success(response.data.msg);
+                    form.reset();
+                    document.getElementById('signUpButton').disabled = false;
+                }
+            }).catch(error => console.log(error));
     });
 }
