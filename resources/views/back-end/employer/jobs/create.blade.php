@@ -43,16 +43,6 @@
                                                 {!! Form::select('job_duration', $job_duration, null, array('class' => '', 'placeholder' => trans('lang.select_job_duration'), 'v-model'=>'job_duration')) !!}
                                             </span>
                                         </div>
-                                        <div class="form-group form-group-half wt-formwithlabel">
-                                            <span class="wt-select">
-                                                {!! Form::select('freelancer_type', $freelancer_level, null, array('placeholder' => trans('lang.select_freelancer_level'), 'class' => '', 'v-model'=>'freelancer_level')) !!}
-                                            </span>
-                                        </div>
-                                        <div class="form-group form-group-half wt-formwithlabel">
-                                            <span class="wt-select">
-                                                {!! Form::select('english_level', $english_levels, null, array('class' => '', 'placeholder' => trans('lang.select_english_level'), 'v-model'=>'english_level')) !!}
-                                            </span>
-                                        </div>
                                         <div class="form-group form-group-half wt-formwithlabel job-cost-input">
                                             {!! Form::number('project_cost', null, array('class' => '', 'placeholder' => trans('lang.project_cost'))) !!}
                                         </div>
@@ -76,18 +66,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="wt-languages-holder wt-tabsinfo">
-                                <div class="wt-tabscontenttitle">
-                                    <h2>{{ trans('lang.langs') }}</h2>
-                                </div>
-                                <div class="wt-divtheme wt-userform wt-userformvtwo">
-                                    <div class="form-group">
-                                        <span class="wt-select">
-                                            {!! Form::select('languages[]', $languages, null, array('class' => 'chosen-select', 'multiple', 'data-placeholder' => trans('lang.select_lang'))) !!}
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="wt-jobdetails wt-tabsinfo">
                                 <div class="wt-tabscontenttitle">
                                     <h2>{{ trans('lang.job_dtl') }}</h2>
@@ -115,9 +94,6 @@
                                         </div>
                                         <div class="form-group form-group-half">
                                             {!! Form::text( 'address', null, ['id'=>"pac-input", 'class' =>'form-control', 'placeholder' => trans('lang.your_address')] ) !!}
-                                        </div>
-                                        <div class="form-group wt-formmap">
-                                            @include('includes.map')
                                         </div>
                                         <div class="form-group form-group-half">
                                             {!! Form::text( 'longitude', null, ['id'=>"lng-input", 'class' =>'form-control', 'placeholder' => trans('lang.enter_logitude')]) !!}
