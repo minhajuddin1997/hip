@@ -82,8 +82,6 @@ class StripeController extends Controller
             ]
         );
         if ($request['ccExpiryYear'] < $current_year) {
-            // Session::flash('error', trans('lang.valid_year'));
-            // return Redirect::back()->withInput();
             $json['type'] = 'error';
             $json['message'] = trans('lang.valid_year');
             return $json;
