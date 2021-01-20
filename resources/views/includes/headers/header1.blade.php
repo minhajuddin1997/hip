@@ -12,6 +12,18 @@
                 <form id="signUpForm" method="POST" enctype="multipart/form-data" class="wt-formtheme wt-loginform do-login-form">
                     @csrf
                     <fieldset>
+                        <div class="input-group mb-3 form-group form-group-half">
+                            <input autocomplete="off" id="first_name" type="text" name="first_name" class="first_name form-control{{ $errors->has('first_name') ? ' is-invalid' : '' }}" placeholder="{{{ trans('lang.ph_first_name') }}}" required autofocus>
+                                  <div class="input-group-append">
+                                    <span class="input-group-text first-name" id="basic-addon2"><i class="fa fa-user-o"></i></span>
+                                  </div>
+                                      @if ($errors->has('first_name'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('first_name') }}</strong>
+                                        </span>
+                                     @endif
+                                </div>
+                        
                         <div class="form-group form-group-half">
                             <input id="first_name" type="text" name="first_name" class="form-control{{ $errors->has('first_name') ? ' is-invalid' : '' }}"
                                    placeholder="{{{ trans('lang.ph_first_name') }}}" required autofocus>
@@ -45,15 +57,6 @@
                             @if ($errors->has('phone'))
                                 <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $errors->first('phone') }}</strong>
-                                                    </span>
-                            @endif
-                        </div>
-                        <div class="form-group">
-                            <input id="company" type="company" name="company" class="form-control{{ $errors->has('company') ? ' is-invalid' : '' }}"
-                                   placeholder="Company" required>
-                            @if ($errors->has('company'))
-                                <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $errors->first('company') }}</strong>
                                                     </span>
                             @endif
                         </div>
