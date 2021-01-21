@@ -1162,4 +1162,9 @@ class PublicController extends Controller
 		$price_range = !empty($general_settings) && !empty($general_settings[0]['price_range']) ? $general_settings[0]['price_range'] : 1000;
         return $price_range;
     }
+    
+    
+
+
+
 }

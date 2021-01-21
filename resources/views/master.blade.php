@@ -55,20 +55,6 @@
             display: none;
         }
         
-        span.input-group-text.first-name {
-        background: transparent;
-        border-left: none;
-        color: #0e9df0;
-        }
-        span.input-group-text.first-name:focus {
-        border: 1px solid #0e9df0;
-        outline: none;
-        }
-        
-        input#first_name {
-        border-right: none;
-        }
-        
     </style>
     @stack('stylesheets')
     <script type="text/javascript">
