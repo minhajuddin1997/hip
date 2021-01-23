@@ -450,3 +450,4 @@ Route::get('search/get-search-filtersV2', 'PublicController@getFilterOptions');
 
 //Career
 Route::get('career', 'CareerController@index');
+Route::post('career/signup', 'CareerController@signup');
