@@ -681,6 +681,10 @@ class PageController extends Controller
         foreach ($inner_pages as $innerPage) {
             array_push($show_pages_list, $innerPage);
         }
+
+
+        dd($show_pages_list);
+        
         if (!empty($show_pages_list)) {
             $json['type'] = 'success';
             $json['pages'] = $show_pages_list;
