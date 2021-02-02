@@ -1,34 +1,628 @@
-*{margin:0;padding:0}body{width:100%!important;background-color:rgb(82,86,89,0.2)}section{margin-bottom:40px}label{color:#000}.bg-1{background-image:url(../images/banner-1.jpg);background-size:cover;background-position:top;width:100%;background-repeat:no-repeat;min-height:550px}.logo-img img{width:100%;padding:10px 20px;margin:30px auto;max-width:200px}.heading h3{color:#fff;font-weight:600}.heading p{color:#fff}.join-now-heading{padding:20px}.join-now-heading h2,.join-now-heading h2,.join-now-heading h6{font-weight:600}.join-now-heading h6{color:#686868;line-height:1.5}hr.form-divider{margin:35px auto}form.join-now{margin:60px auto}input#last_name,input#email,input.select-dropdown.dropdown-trigger,input#first_name,input#gender,input#rate,input#address,input#portfolio,input#footer-email,textarea#textarea2{border:1px solid gray;border-radius:5px;text-indent:10px;margin:14px 0 0 0;height:100%;min-height:40px}input#last_name:focus,input#email:focus,input#first_name:focus,input.select-dropdown.dropdown-trigger:focus,input#gender:focus,input#rate:focus,input#address:focus,textarea#textarea2:focus,input#portfolio:focus,input#footer-email:focus{border:1px solid #26a69a}.right-auto{right:15px}.radius-50 label{padding:0;font-size:18px;color:gray;font-weight:600}textarea#textarea2{min-height:100px}input.valid:not([type]),input.valid:not([type]):focus,input.valid[type=text]:not(.browser-default),input.valid[type=text]:not(.browser-default):focus,input.valid[type=password]:not(.browser-default),input.valid[type=password]:not(.browser-default):focus,input.valid[type=email]:not(.browser-default),input.valid[type=email]:not(.browser-default):focus,input.valid[type=url]:not(.browser-default),input.valid[type=url]:not(.browser-default):focus,input.valid[type=time]:not(.browser-default),input.valid[type=time]:not(.browser-default):focus,input.valid[type=date]:not(.browser-default),input.valid[type=date]:not(.browser-default):focus,input.valid[type=datetime]:not(.browser-default),input.valid[type=datetime]:not(.browser-default):focus,input.valid[type=datetime-local]:not(.browser-default),input.valid[type=datetime-local]:not(.browser-default):focus,input.valid[type=tel]:not(.browser-default),input.valid[type=tel]:not(.browser-default):focus,input.valid[type=number]:not(.browser-default),input.valid[type=number]:not(.browser-default):focus,input.valid[type=search]:not(.browser-default),input.valid[type=search]:not(.browser-default):focus,textarea.materialize-textarea.valid,textarea.materialize-textarea.valid:focus,.select-wrapper.valid>input.select-dropdown{border:1px solid #d9d9d9!important;color:#4caf50}.dropify-wrapper{border:2px dashed #d9d9d9!important;border-radius:5px!important}.dropify-font-upload:before,.dropify-wrapper .dropify-message span.file-icon:before{content:'\f093';font-family:FontAwesome;color:#0e9df0}.dropify-wrapper .dropify-message p{margin:5px 0 0;font-size:20px}.dropify-wrapper:hover{background-image:linear-gradient(-45deg,rgb(16,153,237,0.1) 25%,transparent 25%,transparent 50%,rgb(16,153,237,0.1) 50%,rgb(16,153,237,0.1) 75%,transparent 75%,transparent)!important}.cv .dropify-wrapper .dropify-message{transform:translateY(0%)!important;top:0}.cv .dropify-wrapper{height:100%;min-height:42px;max-height:42px;border:1px solid #d9d9d9!important}.cv .dropify-wrapper .dropify-message span.file-icon::before{font-size:20px;font-weight:600;float:right}.cv .dropify-wrapper .dropify-message p{font-size:16px;text-align:left}input#portfolio{background-color:#fff;text-indent:30px}footer{background:#323232;padding:60px 0;color:#fff}.footer-logo{margin:10px auto;border-right:2px solid #fff}.footer-logo img{width:100%;max-width:150px;margin-bottom:20px}.menu h6{font-weight:700}.menu{margin:20px auto;line-height:2;padding-left:50px!important}.menu a{color:#fff;font-weight:500}.footer-email{margin:20px auto}.footer-email h6{font-weight:700;margin-bottom:20px!important}.footer-email input[type=email]{color:#fff}a.btn.send{background:#0e9df0;padding:0 30px;border-radius:50px;font-weight:700}::-webkit-input-placeholder{color:gray;font-weight:500}:-ms-input-placeholder{color:gray;font-weight:500}::placeholder{color:gray;font-weight:500}.radius-50{margin:10px auto}.chip{height:100%!important;font-size:16px;font-weight:600!important;background-color:transparent;border:1px solid;border-radius:5px;padding:2px 15px!important}.chips{border-bottom:1px solid gray;margin:22px 0 0 0!important;min-height:29px}.chip .close{cursor:pointer;float:right;font-size:16px;line-height:32px;padding-left:15px!important;color:#00a4e0;font-weight:600}.chip:focus{outline:0;background-color:#00a4e0;color:#fff}.dropify-font-upload:before,.dropify-wrapper .dropify-message span.file-icon:before{content:'\f055 '!important;font-family:FontAwesome!important;font-weight:400!important}.form-bg{background:#fff;border:2px solid #0e9df0;border-radius:10px}.mb0{margin-bottom:0}button.send{background-color:#00a4e0;width:100%;font-weight:700;border:0}button.send:hover{border:1px dashed #00a4e0;color:#00a4e0;background:transparent;transition:.8s ease-out}ul.wt-socialiconfooter{display:flex;width:100%;position:relative;left:-16px;margin-bottom:0;margin:20px auto}ul.wt-socialiconfooter li{padding:17px!important;color:#fff;font-size:18px}ul.wt-socialiconfooter li a{color:#fff}
-
-@media only screen and (max-width: 480px){
-    .footer-logo{
-        border-right: none;
-    }
-    
-    .menu {
-        margin: 0px auto;
-        line-height: 2;
-        padding-left: 10px!important;
-    }
-    .heading h3 {
-        font-size: 20px;
-        line-height: 1.3;
-    }
-    .join-now-heading h2, .join-now-heading h2 {
-        font-size: 40px;
-    }
+* {
+	margin: 0;
+	padding: 0
 }
 
-@media only screen and (max-width: 1024px){
-    h5 {
-        font-size: 20px;
+body {
+	width: 100%!important;
+}
+
+section {
+	margin-bottom: 40px
+}
+
+label {
+	color: #000
+}
+
+.bg-1 {
+	background-image: url(../images/banner-1.jpg);
+	background-size: cover;
+	background-position: top;
+	width: 100%;
+	background-repeat: no-repeat;
+	min-height: 550px
+}
+
+.logo-img img {
+    width: auto;
+    padding: 10px 20px;
+    margin: 30px auto 0;
+    /*max-width: 200px;*/
+    margin-top: 0px;
+}
+.skills-cat-tn .hide-tn{
+    display:none;
+}
+.heading h3 {
+	color: #fff;
+	font-weight: 600;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.heading p {
+	color: #fff
+}
+
+.join-now-heading {
+	padding: 20px
+}
+
+.join-now-heading h2,
+.join-now-heading h2,
+.join-now-heading h6 {
+	font-weight: 600
+}
+
+.join-now-heading h6 {
+	color: #686868;
+	line-height: 1.5;
+	padding-top: 20px;
+	margin-bottom: 0;
+}
+
+hr.form-divider {
+	margin: 0 auto 12px;
+}
+
+form.join-now {
+	margin: 50px auto;
+	margin-bottom: 4px;
+}
+input.select-dropdown.dropdown-trigger{
+    color: gray;
+    font-weight: 500;
+}
+
+
+input#last_name,
+input#email,
+input.select-dropdown.dropdown-trigger,
+input#first_name,
+input#gender,
+input#rate,
+input#address,
+input#portfolio,
+input#footer-email,
+textarea#textarea2,
+input#phone_number,
+input#experience,
+input#per-hour-rate,
+input#tagline{
+	border: 1px solid gray;
+	border-radius: 5px;
+	text-indent: 10px;
+	margin: 14px 0 0 0;
+	height: 100%;
+	min-height: 40px
+}
+
+input#last_name:focus,
+input#email:focus,
+input#first_name:focus,
+input.select-dropdown.dropdown-trigger:focus,
+input#gender:focus,
+input#rate:focus,
+input#address:focus,
+textarea#textarea2:focus,
+input#portfolio:focus,
+input#footer-email:focus,
+input#phone_number:focus,
+input#experience:focus,
+input#per-hour-rate:focus,
+input#tagline:focus{
+	border: 1px solid #26a69a
+}
+
+.right-auto {
+	right: 15px
+}
+
+.radius-50 label {
+	padding: 0;
+	font-size: 18px;
+	color: gray;
+	font-weight: 600
+}
+
+textarea#textarea2 {
+	min-height: 100px
+}
+
+input.valid:not([type]),
+input.valid:not([type]):focus,
+input.valid[type=text]:not(.browser-default),
+input.valid[type=text]:not(.browser-default):focus,
+input.valid[type=password]:not(.browser-default),
+input.valid[type=password]:not(.browser-default):focus,
+input.valid[type=email]:not(.browser-default),
+input.valid[type=email]:not(.browser-default):focus,
+input.valid[type=url]:not(.browser-default),
+input.valid[type=url]:not(.browser-default):focus,
+input.valid[type=time]:not(.browser-default),
+input.valid[type=time]:not(.browser-default):focus,
+input.valid[type=date]:not(.browser-default),
+input.valid[type=date]:not(.browser-default):focus,
+input.valid[type=datetime]:not(.browser-default),
+input.valid[type=datetime]:not(.browser-default):focus,
+input.valid[type=datetime-local]:not(.browser-default),
+input.valid[type=datetime-local]:not(.browser-default):focus,
+input.valid[type=tel]:not(.browser-default),
+input.valid[type=tel]:not(.browser-default):focus,
+input.valid[type=number]:not(.browser-default),
+input.valid[type=number]:not(.browser-default):focus,
+input.valid[type=search]:not(.browser-default),
+input.valid[type=search]:not(.browser-default):focus,
+textarea.materialize-textarea.valid,
+textarea.materialize-textarea.valid:focus,
+.select-wrapper.valid>input.select-dropdown{
+	border: 1px solid #d9d9d9!important;
+	color: #4caf50
+}
+
+.dropify-wrapper {
+	border: 2px dashed #d9d9d9!important;
+	border-radius: 5px!important
+}
+
+.dropify-font-upload:before,
+.dropify-wrapper .dropify-message span.file-icon:before {
+	content: '\f093';
+	font-family: FontAwesome;
+	color: #0e9df0
+}
+
+.dropify-wrapper .dropify-message p {
+	margin: 5px 0 0;
+	font-size: 20px
+}
+
+.dropify-wrapper:hover {
+	background-image: linear-gradient(-45deg, rgb(16, 153, 237, 0.1) 25%, transparent 25%, transparent 50%, rgb(16, 153, 237, 0.1) 50%, rgb(16, 153, 237, 0.1) 75%, transparent 75%, transparent)!important
+}
+
+.cv .dropify-wrapper .dropify-message {
+	transform: translateY(0%)!important;
+	top: 0
+}
+
+.cv .dropify-wrapper {
+	height: 100%;
+	min-height: 42px;
+	max-height: 42px;
+	border: 1px solid #d9d9d9!important
+}
+
+.cv .dropify-wrapper .dropify-message span.file-icon::before {
+	font-size: 20px;
+	font-weight: 600;
+	float: right
+}
+
+.cv .dropify-wrapper .dropify-message p {
+	font-size: 16px;
+	text-align: left
+}
+
+input#portfolio {
+	background-color: #fff;
+	text-indent: 30px
+}
+
+footer {
+	background: #323232;
+	padding: 60px 0;
+	color: #fff
+}
+
+.footer-logo {
+    margin: 10px auto;
+    border-right: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+.footer-logo img {
+	width: 100%;
+	max-width: 150px;
+	margin-bottom: 20px
+}
+
+.menu h6 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.menu {
+	margin: 20px auto;
+	line-height: 2;
+	padding-left: 50px!important
+}
+
+.menu a {
+    color: #ccc;
+    font-weight: 400;
+    transition: all 300ms ease-in-out;
+}
+.menu a:hover {
+    padding-left: 10px;
+    transition: all 300ms ease-in-out;
+}
+
+.footer-email {
+	margin: 20px auto
+}
+
+.footer-email h6 {
+    margin-bottom: 20px!important;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.footer-email input[type=email] {
+    color: #000;
+    background: #fff;
+    border-radius: 10px;
+}
+
+a.btn.send {
+	background: #0e9df0;
+	padding: 0 30px;
+	border-radius: 50px;
+	font-weight: 700
+}
+
+::-webkit-input-placeholder {
+	color: gray;
+	font-weight: 500
+}
+
+:-ms-input-placeholder {
+	color: gray;
+	font-weight: 500
+}
+
+::placeholder {
+	color: gray;
+	font-weight: 500
+}
+
+.radius-50 {
+	margin: 10px auto
+}
+
+.chip {
+	height: 100%!important;
+	font-size: 16px;
+	font-weight: 600!important;
+	background-color: transparent;
+	border: 1px solid;
+	border-radius: 5px;
+	padding: 2px 15px!important
+}
+
+.chips {
+	border-bottom: 1px solid gray;
+	margin: 22px 0 0 0!important;
+	min-height: 29px
+}
+
+.chip .close {
+	cursor: pointer;
+	float: right;
+	font-size: 16px;
+	line-height: 32px;
+	padding-left: 15px!important;
+	color: #00a4e0;
+	font-weight: 600
+}
+
+.chip:focus {
+	outline: 0;
+	background-color: #00a4e0;
+	color: #fff
+}
+
+.dropify-font-upload:before,
+.dropify-wrapper .dropify-message span.file-icon:before {
+	content: '\f055 '!important;
+	font-family: FontAwesome!important;
+	font-weight: 400!important
+}
+
+.form-bg {
+	background: #fff;
+	padding: 50px 100px;
+}
+
+.mb0 {
+	margin-bottom: 0
+}
+
+button.send {
+	background-color: #00a4e0;
+	width: 100%;
+	font-weight: 700;
+	border: 0;
+	margin: 45px auto 0px;
+}
+
+button.send:hover {
+	border: 1px dashed #00a4e0;
+	color: #00a4e0;
+	background: transparent;
+	transition: .8s ease-out
+}
+
+ul.wt-socialiconfooter {
+	display: flex;
+	width: 100%;
+	position: relative;
+	left: -16px;
+	margin-bottom: 0;
+	margin: 20px auto
+}
+
+ul.wt-socialiconfooter li {
+	padding: 17px!important;
+	color: #fff;
+	font-size: 18px
+}
+
+ul.wt-socialiconfooter li a {
+	color: #fff
+}
+
+@media only screen and (max-width: 480px) {
+	.footer-logo {
+		border-right: none;
+	}
+	.menu {
+		margin: 0px auto;
+		line-height: 2;
+		padding-left: 10px!important;
+	}
+	.heading h3 {
+		font-size: 20px;
+		line-height: 1.3;
+	}
+	.join-now-heading h2,
+	.join-now-heading h2 {
+		font-size: 40px;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	h5 {
+		font-size: 20px;
+	}
+	.dropify-font-upload:before,
+	.dropify-wrapper .dropify-message span.file-icon:before {
+		font-size: 30px;
+	}
+	.dropify-wrapper .dropify-message p {
+		font-size: 14px;
+	}
+	.form-bg {
+    background: #fff;
+    padding: 50px 30px;
     }
-    .dropify-font-upload:before, 
-    .dropify-wrapper .dropify-message span.file-icon:before{
+}
+section.right-bg {
+    background: url(../images/side-2.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: auto;
+}
+.bg-left {
+    background: url(../images/side.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+[type="checkbox"]:checked + span:not(.lever):before {
+    border-right: 2px solid #0E9DF0 !important;
+    border-bottom: 2px solid #0E9DF0 !important;
+}
+.select-wrapper + label {
+    top: 0;
+}
+.select-dropdown li.disabled, .select-dropdown li.disabled>span, .select-dropdown li.optgroup {
+    color: rgba(0,0,0,0.3);
+    background-color: #00A4E0;
+}
+.select-dropdown li.disabled, .select-dropdown li.disabled > span, .select-dropdown li.optgroup {
+    color: #fff;
+    font-weight: 600;
+}
+[type="checkbox"].filled-in:checked + span:not(.lever):after{
+    border: 2px solid #0E9DF0 !important;
+    background:#fff !important;
+}
+div#skill-1,
+div#skill-2,
+div#skill-3,
+div#skill-4,
+div#skill-5,
+div#skill-6,
+div#skill-7,
+div#skill-8,
+div#skill-9{
+    margin: 30px auto;
+    padding-left: 35px;
+}
+.file-uploader {
+    margin: 30px auto !important;
+}
+
+[type="checkbox"].filled-in:not(:checked) + span:not(.lever):after {
+    height: 12px;
+    width: 12px;
+    border: 1px solid #5a5a5a;
+    top: 6px;
+}
+
+
+@media only screen and (max-width: 480px){
+div#skill-1,
+div#skill-2,
+div#skill-3,
+div#skill-4,
+div#skill-5,
+div#skill-6,
+div#skill-7,
+div#skill-8,
+div#skill-9{
+    margin: 25px auto;
+    padding-left: 0px;
+    border-bottom: 1px solid gray;
+}
+footer{
+    text-align: center;
+}
+ul.wt-socialiconfooter{
+    left:0;
+}
+ul.wt-socialiconfooter li {
+    margin: auto;
+}
+.footer-logo p {
+    padding: 0 !important;
+}
+.heading h3 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+}
+.dropify-wrapper .dropify-message p {
+    color: gray !important;
+}
+.footer-logo p {
+    color: #ccc;
+    padding: 0 12px 0px 0px;
+}
+.footer-email input[type=email] {
+    color: #000;
+    background: #fff;
+    border-radius: 10px;
+    /* padding: 5px 20px; */
+    width: 100%;
+    text-indent: 10px;
+}
+.footer-mail button{
+    margin: 3px auto;
+    background: #00C0FF 0% 0% no-repeat padding-box;
+    font-size: 0.7875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+    font-weight: 500;
+}
+button.send:hover,
+.footer-mail button:hover {
+    color: #fff;
+    background-color: #227dc7;
+    border-color: #2176bd;
+}
+
+/*custom css tn*/
+section.bg-tn {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+@keyframes mymove {
+   0%   {bottom: 5vh;}
+  50%  {bottom: 7vh;}
+  100%  {bottom: 5vh;}
+}
+p.go-down {
+    margin-top: 50px;
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: mymove 3s infinite;
+}
+p.go-down a {
+    font-size: 50px;
+    font-weight: normal;
+    background: #fff;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 80px;
+    transition: all .3s linear 0s;
+}
+.skills-cat-tn > div.skill-category {
+    width: 50%;
+    float: left;
+    margin-bottom: 10px;
+}
+.skills-cat-tn h5 {
+    clear: both;
+    display: inline-block;
+    width: 100%;
+    margin: 1.0933333333rem 0 1.2rem 0;
+    margin-top: 0;
+}
+div.skills-cat-tn {
+    display: inline-block;
+    width: 100%;
+}
+div.skills-cat-tn {
+    float: none;
+}
+.col div.file-uploader.row {
+    display: inline-block;
+    width: 100%;
+    margin-left: -0.75rem !important;
+    margin-right: -0.75rem !important;
+}
+.row.p-url-tn > div {
+    margin: 0 auto;
+    float: none;
+    display: block;
+}
+.row.p-url-tn {
+    text-align: center;
+}
+.row.p-url-tn > div input {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.term-check-tn {
+    text-align: center;
+}
+.submit-form-tn button {
+    max-width: 200px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+}
+html {
+     scroll-behavior: smooth;
+}
+p.go-down a:hover {
+    background: #0e9bef;
+    color: #fff;
+}
+/*981 to 1279*/
+@media(min-width:981px) and (max-width:1279px){
+    .bg-tn h3 {
+        font-size: 2.4rem;
+    }
+    p.go-down a {
         font-size: 30px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
     }
-    .dropify-wrapper .dropify-message p{
-        font-size: 14px;
-    }
-    
 }

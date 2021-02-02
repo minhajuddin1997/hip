@@ -61,14 +61,15 @@ class SkillController extends Controller
     {
         if (!empty($_GET['keyword'])) {
             $keyword = $_GET['keyword'];
-            $skills = $this->skill::where('title', 'like', '%' . $keyword . '%')->paginate(7)->setPath('');
+            $skills = DB::table('skills')->join('skills_category', 'skills.skill_category', '=', 'skills_category.id')->select('skills.*', 'skills_category.name AS category_name')->where('title', 'like', '%' . $keyword . '%')->paginate(7)->setPath('');
+            //$skills = $this->skill::where('title', 'like', '%' . $keyword . '%')->paginate(7)->setPath('');
             $pagination = $skills->appends(
                 array(
                     'keyword' => Input::get('keyword')
                 )
             );
         } else {
-            $skills = $this->skill->paginate(7);
+            $skills = DB::table('skills')->join('skills_category', 'skills.skill_category', '=', 'skills_category.id')->select('skills.*', 'skills_category.name AS category_name')->paginate(7);
         }
         if (file_exists(resource_path('views/extend/back-end/admin/skills/index.blade.php'))) {
             return View::make(
@@ -281,7 +282,11 @@ class SkillController extends Controller
     public function getSkills()
     {
         $json = array();
-        $skills = Skill::select('title', 'id')->get()->toArray();
+        
+        
+            
+        $skills = DB::table('skills')->join('skills_category', 'skills.skill_category', '=', 'skills_category.id')->select('skills.*', 'skills_category.name AS category_name ')->get()->toArray();
+        //$skills = Skill::select('title', 'id')->get()->toArray();
         if (!empty($skills)) {
             $json['type'] = 'success';
             $json['skills'] = $skills;

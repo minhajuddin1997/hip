@@ -121,6 +121,7 @@
         @yield('footer')
     </div>
 </div>
+
 <script src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
 @yield('bootstrap_script')
 <script src="{{ asset('js/app.js') }}"></script>
@@ -137,6 +138,7 @@
     $(function () {
 
     })
+    
 </script>
 </body>
 </html>

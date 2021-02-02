@@ -77,12 +77,15 @@
                                             </th>
                                             <th>{{{ trans('lang.name') }}}</th>
                                             <th>{{{ trans('lang.slug') }}}</th>
+                                            <th> Category</th>
                                             <th>{{{ trans('lang.action') }}}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @php $counter = 0; @endphp
+                                        
                                         @foreach ($skills as $skill)
+                                    
                                             <tr class="del-{{{ $skill->id }}}" v-bind:id="skillID">
                                                 <td>
                                                     <span class="wt-checkbox">
@@ -92,6 +95,7 @@
                                                 </td>
                                                 <td>{{{ $skill->title }}}</td>
                                                 <td>{{{ $skill->slug }}}</td>
+                                                <td>{{{ $skill->category_name }}}</td>
                                                 <td>
                                                     <div class="wt-actionbtn">
                                                         <a href="{{{ url('admin/skills/edit-skills') }}}/{{{ $skill->id }}}" class="wt-addinfo wt-skillsaddinfo">
