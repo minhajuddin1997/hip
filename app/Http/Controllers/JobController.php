@@ -372,9 +372,16 @@ class JobController extends Controller
                     $json['message'] = trans('lang.job_post_success');
                     // Send Email
                     $user = User::find(Auth::user()->id);
+
+
                     //send email to admin
                     if (!empty(config('mail.username')) && !empty(config('mail.password'))) {
                         $job = $this->job::where('user_id', Auth::user()->id)->latest()->first();
+
+                        
+                    dd($job);
+
+
                         $email_params = array();
                         $new_posted_job_template = DB::table('email_types')->select('id')->where('email_type', 'admin_email_new_job_posted')->get()->first();
                         $new_posted_job_template_employer = DB::table('email_types')->select('id')->where('email_type', 'employer_email_new_job_posted')->get()->first();
