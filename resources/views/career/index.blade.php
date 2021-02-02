@@ -33,6 +33,7 @@
          <div class="container form-bg">
             <div class="row">
                <div class="col l12 center-align">
+                   <h3>Your Profile</h3>
                   <h6>Unlock Your Doors to Millions of Opportunities! Enter the Fastest-Growing Freelance Market and Hunt for the Desired Job!</h6>
                </div>
             </div>
@@ -362,7 +363,7 @@
                      </div>
                   </div>
                   <div class="text-center skills-cat-tn">
-                     <h5>Skills </h5>
+                     <h5>Skills <span><a class="tooltipped" data-position="right" data-tooltip="your text here">?</a></span></h5>
                      <? $skill_id  = 0; 
                         $one_time = 0;
                         ?>
@@ -372,7 +373,7 @@
             </div>
             <?php } $one_time = 1; } ?>
             <?php if( $skill_id !=  $skill->skill_category ){ ?>
-            <div id="skill-category-{{ $skill->skill_category }}" class="skill-category heading" class="col l12 m12 s12">
+            <div id="skill-category-{{ $skill->skill_category }}" class="skill-category heading" class="col l6 m12 s12">
             <label>
             <input type="checkbox" class="skill_category_input" data-id="{{ $skill->skill_category }}" name="skill_category[]" value="{{ $skill->category_name }}" class="filled-in">
             <span><b>{{ $skill->category_name }}</b></span>
@@ -409,7 +410,7 @@
          <div class="row p-url-tn">
          <div class="col s12 m8">
          <label for="input-file-now">
-         <h5>Profile Photo</h5>
+         <h5>Profile Photo <span><a class="tooltipped" data-position="right" data-tooltip="your text here">?</a></span></h5>
          </label>
          <input required  type="file" name="profile_photo" id="input-file-now" class="dropify" />
          </div>
@@ -417,7 +418,7 @@
          <div class="row p-url-tn">
          <div class="col s12 m8">
          <label for="input-file-now">
-         <h5>Portfolio</h5>
+         <h5>Portfolio <span><a class="tooltipped" data-position="right" data-tooltip="your text here">?</a></span></h5>
          </label>
          <input required  type="file" name="portfolio" id="input-file" class="dropify" />
          </div>
@@ -425,7 +426,7 @@
          <div class="row p-url-tn">
          <div class="col s12 m8">
          <label>
-         <h5>Portfolio Url</h5>
+         <h5>Portfolio Url <span><a class="tooltipped" data-position="right" data-tooltip="your text here">?</a></span></h5>
          </label>
          <input required placeholder="Portfolio URL//" id="portfolio_link" name="portfolio_link" type="text" class="validate" >
          </div>
@@ -480,15 +481,14 @@
                      </li>
                   </ul>
                </div>
-               <div class="col m4 s12 footer-email">
-                  <h6>Sign Up For Newsletter</h6>
-                  <div class="input-field col l12 s12 radius-50">
-                     <input placeholder="Email" id="newsletter_email" name="newsletter_email" type="email" class="validate" >
-                     <span class="helper-text" data-error="wrong" data-success="right"></span>
-                     <div class="col l5 s12 footer-mail">
-                        <button type="submit" class="btn send button z-depth-3"> SEND </button>
-                     </div>
-                  </div>
+               <div class="col l4 m4 s12  footer-email">
+                    <div class="footer-mail">
+                        <h6>Sign Up for Newsletter</h6>
+                            <form>
+                                <input type="email" id="email" name="email" placeholder="Email" autocomplete="off">
+                                <button type="submit" class="btn btn-sm btn-primary">Send</button>
+                            </form>
+                        </div>
                </div>
             </div>
          </div>
@@ -582,14 +582,11 @@
                  
              });
              
-             
-         
-         
-         
-         
-         
-         
-         
       </script>
+      <script>
+  $(document).ready(function(){
+    $('.tooltipped').tooltip();
+  });
+</script>
    </body>
 </html>

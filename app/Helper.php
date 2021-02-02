@@ -1401,10 +1401,10 @@ class Helper extends Model
                 'color' => '#55acee',
                 'icon' => 'fab fa-twitter',
             ),
-            'youtube' => array(
-                'title' => trans('lang.social_icons.youtube'),
+            'linkedin' => array(
+                'title' => 'LinkedIn',
                 'color' => '#0077B5',
-                'icon' => 'fab fa-youtube',
+                'icon' => 'fab fa-linkedin',
             ),
             'instagram' => array(
                 'title' => trans('lang.social_icons.insta'),
