@@ -189,7 +189,14 @@ class UserController extends Controller
                 return response()->json($data, 200);
             }
         } else {
-            $userId = User::select('id')->whereEmail($request->input('email'))->first()->id;
+            $userId = User::select('id')->whereEmail($request->input('email'))->first();
+            //dd($userId);
+            
+            
+            /*
+            $userId = User::select('id')->whereEmail($request->input('email'))->first()->id;*/
+            
+            
             if (!empty($userId)) {
                 $user = User::findOrFail($userId);
                 if ($user->first_name . '-' . $user->last_name != $request['first_name'] . '-' . $request['last_name']) {
@@ -2117,6 +2124,10 @@ class UserController extends Controller
                 'email' => 'required|email',
             ]
         );
+        
+        dd($request);
+        
+        
         $json = array();
         if (!empty($request)) {
             $user_id = Auth::user()->id;
