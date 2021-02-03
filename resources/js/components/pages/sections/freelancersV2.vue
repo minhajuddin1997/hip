@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
                     <!-- <carousel id="wt-freelancers-silder" class="wt-freelancers-silder" :items='3' :loop='true' :nav='false' :dots='true' 
                     :autoplay='false' :margin='30' v-if="filtersApplied"> -->
