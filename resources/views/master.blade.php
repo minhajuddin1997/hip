@@ -37,7 +37,6 @@
     <link href="{{ asset('css/transitions.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
         div#wt-innerbannerholdertwo {
@@ -57,6 +56,18 @@
         .wt-bannerholdervtwo .wt-bannercontent .wt-videoholder{
             display: none;
         }
+        .wt-freelancer-img {
+            width: 100%;
+        }
+        .wt-border-bg {
+            display: none;
+        }
+        @media (max-width: 991px){
+            {
+                .wt-header .wt-navigation>ul>.menu-item-has-children:after, .wt-header .wt-navigation > ul > li > a
+                color: #767676 !important;
+            }
+        }       
         
     </style>
     @stack('stylesheets')
@@ -132,7 +143,7 @@
 <script src="{{ asset('js/scrollbar.min.js') }}"></script>
 <script src="{{ asset('js/particles.min.js') }}"></script>
 <script src="{{ asset('js/jquery-ui-min.js') }}"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
 
 @stack('scripts')
 <script>
@@ -147,7 +158,9 @@
 </script>
 
 <script>
-  AOS.init();
+AOS.init({
+  duration: 1200,
+})
 </script>
 
 </body>
