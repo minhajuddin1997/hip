@@ -22,6 +22,7 @@ Route::fallback(
 Auth::routes();
 // Signup
 Route::post('signup','UserController@signup')->name('signup');
+
 // Cache clear route
 Route::get(
     'cache-clear',
@@ -451,3 +452,8 @@ Route::get('search/get-search-filtersV2', 'PublicController@getFilterOptions');
 //Career
 Route::get('career', 'CareerController@index');
 Route::post('career/signup', 'CareerController@signup');
+
+
+
+// GetStarted
+Route::post('get-started','UserController@getStarted')->name('getStarted');

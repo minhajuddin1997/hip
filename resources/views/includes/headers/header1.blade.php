@@ -1,4 +1,4 @@
-<!-- Modal -->
+<!-- SignUp Modal -->
 <div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="signUpTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -88,6 +88,84 @@
         </div>
     </div>
 </div>
+
+
+<!-- Get Started -->
+<div class="modal fade" id="getStarted" tabindex="-1" role="dialog" aria-labelledby="signUpTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"> Get Started</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="getStartedForm" method="POST" enctype="multipart/form-data" class="wt-formtheme wt-loginform do-login-form">
+                    @csrf
+                    <fieldset>
+                        <div class="form-group form-group-half">
+                            <input id="gs_first_name" type="text" name="gs_first_name" class="form-control{{ $errors->has('gs_first_name') ? ' is-invalid' : '' }}"
+                                   placeholder="First Name" required autofocus>
+                            @if ($errors->has('gs_first_name'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('gs_first_name') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                        <div class="form-group form-group-half">
+                            <input id="gs_last_name" type="text" name="gs_last_name" class="form-control{{ $errors->has('gs_last_name') ? ' is-invalid' : '' }}"
+                                   placeholder="Last Name" required autofocus>
+                            @if ($errors->has('gs_last_name'))
+                                <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $errors->first('gs_last_name') }}</strong>
+                                                    </span>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <input id="email" type="email" name="gs_email" class="form-control{{ $errors->has('gs_email') ? ' is-invalid' : '' }}"
+                                   placeholder="Email" required autofocus>
+                            @if ($errors->has('gs_email'))
+                                <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $errors->first('gs_email') }}</strong>
+                                                    </span>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <input id="gs_phone" type="text" name="gs_phone" class="form-control{{ $errors->has('gs_phone') ? ' is-invalid' : '' }}"
+                                   placeholder="Phone" required autofocus>
+                            @if ($errors->has('gs_phone'))
+                                <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $errors->first('gs_phone') }}</strong>
+                                                    </span>
+                            @endif
+                        </div>
+
+
+                        <div class="form-group">
+                            
+
+                                   <textarea placeholder="Message"  id="gs_message" type="text" name="gs_message" class="form-control{{ $errors->has('gs_message') ? ' is-invalid' : '' }}"
+                                    required autofocus  cols="30" rows="10"> </textarea>
+                            @if ($errors->has('gs_message'))
+                                <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $errors->first('gs_message') }}</strong>
+                                                    </span>
+                            @endif
+                        </div>
+
+
+                        <div class="wt-logininfo">
+                            <button type="submit" id="getStartedButton" class="wt-btn do-login-button">Submit</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <header id="wt-header" class="wt-header wt-haslayout wt-headervtwo">
     <div class="wt-navigationarea @if(request()->segment(1) === 'page') nav-1 @endif">
         <div class="container-fluid">

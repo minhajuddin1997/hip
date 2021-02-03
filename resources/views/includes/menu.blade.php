@@ -95,11 +95,15 @@
                     </li>
                 @endif
             @endif
+           
+           
             @php 
                 $order=''; $page_order=''; 
                 $custom_menus = !empty($menu_settings['custom_links']) ? $menu_settings['custom_links'] : '';
                 // dd($custom_menus);
             @endphp
+
+            
             @if (!empty($custom_menus))
                 @foreach($custom_menus as $custom_key => $custom_value)
                     @if ($custom_value['relation_type'] == 'parent')
