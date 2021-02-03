@@ -78,47 +78,6 @@
                                 <i class="ti-heart"></i><span  class="save_text">{{trans("lang.save")}} </span></a>
                             </li>
                         </ul>
-
-
-
-
-                        <figure class="wt-freelancer-img">
-                            <img :src="freelancer.image" alt="image">
-                        </figure>
-                        <div class="wt-freelancer-head">
-                            <div class="wt-freelancer-tag">
-                                <a :href="baseUrl+'/profile/'+freelancer.slug">{{freelancer.name}}</a>
-                            </div>
-                            <div class="wt-title">
-                                <h3>{{freelancer.tagline}}</h3>
-                            </div>
-                            <div class="wt-freelancer-about">
-                                <div class="wt-freelancer-price"><span><i class="fas fa-money-bill-alt"></i> {{freelancer.symbol}}{{freelancer.hourly_rate}} / hr </span></div>
-                                <div class="wt-rating">
-                                    <span class="wt-stars wt-starstwo"><span></span></span> <em>{{freelancer.average_rating_count}}{{ trans('lang.5') }}</em>
-                                </div>
-                            </div>
-                            <div class="wt-freelancer-social">
-                                <ul>
-                                    <li v-for="(skill, item) in freelancer.skills" :key="item">
-                                        <a href="javascript:void(0)">{{skill}}</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <ul class="wt-freelancer-footer">
-                            <li>
-                                <address><i class="ti-location-pin"></i> {{freelancer.location}}</address>
-                            </li>
-                            <li v-if="freelancer.save_freelancers.includes(freelancer.id)">
-                                <a href="javascript:void(0);"  class="wt-liked">
-                                <i class="ti-heart"></i> {{trans("lang.saved")}}</a>
-                            </li>
-                            <li v-else>
-                                <a href="javascript:void(0);" class="wt-savefreelancer" :id="'freelancer-'+freelancer.id" @click.prevent="add_wishlist('freelancer-'+freelancer.id, freelancer.id, 'saved_freelancer')">
-                                <i class="ti-heart"></i><span  class="save_text">{{trans("lang.save")}} </span></a>
-                            </li>
-                        </ul>
                     </div>
                 </carousel>
             </div>
