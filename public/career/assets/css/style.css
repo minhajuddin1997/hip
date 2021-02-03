@@ -254,7 +254,7 @@ footer {
 }
 
 .footer-email h6 {
-    margin-bottom: 20px!important;
+    margin-bottom: 15px!important;
     font-weight: 500;
     font-size: 24px;
 }
@@ -560,9 +560,12 @@ p.go-down a {
     transition: all .3s linear 0s;
 }
 .skills-cat-tn > div.skill-category {
-    width: 50%;
+    width: 32%;
     float: left;
     margin-bottom: 10px;
+    justify-content: center;
+    text-align: left;
+    margin-left: 180px;
 }
 .skills-cat-tn h5 {
     clear: both;
@@ -570,6 +573,7 @@ p.go-down a {
     width: 100%;
     margin: 1.0933333333rem 0 1.2rem 0;
     margin-top: 0;
+    text-align: center;
 }
 div.skills-cat-tn {
     display: inline-block;
@@ -625,4 +629,40 @@ p.go-down a:hover {
         height: 50px;
         line-height: 50px;
     }
+}
+.footer-mail input {
+    width: 100%;
+    border-radius: 10px !important;
+    margin: 10px auto !important;
+    margin-top: 0px !important;
+    height: 50px !important;
+    max-width: 350px;
+}
+
+@media only screen and (max-width: 1440px){
+.skills-cat-tn > div.skill-category {
+    width: 30% ;
+    margin-left: 130px ;
+}
+}
+@media only screen and (max-width: 1024px){
+    .skills-cat-tn > div.skill-category {
+    width: 32% !important;
+    margin-left: 100px !important;
+}
+}
+@media only screen and (max-width: 768px){
+    .skills-cat-tn > div.skill-category {
+    width: 50% !important;
+    margin-left: 0px !important;
+}
+}
+@media only screen and (max-width: 480px){
+.skills-cat-tn > div.skill-category {
+    width: 50% !important;
+    margin-left: 0px !important;
+}
+.footer-mail button {
+    width: 100%;
+}
 }
