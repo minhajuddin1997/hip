@@ -40,7 +40,7 @@
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
-                            <div class="wt-bannercontent">
+                            <div class="wt-bannercontent" data-aos="zoom-in-down">
                                 <div class="wt-bannerhead">
                                     <div class="wt-title">
                                         <h1>

@@ -36,6 +36,7 @@
     @php echo \App\Typo::setSiteStyling(); @endphp
     <link href="{{ asset('css/transitions.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         div#wt-innerbannerholdertwo {
             background-image: url("{{ asset('images/Group-260.png') }}") !important;
@@ -129,6 +130,7 @@
 <script src="{{ asset('js/scrollbar.min.js') }}"></script>
 <script src="{{ asset('js/particles.min.js') }}"></script>
 <script src="{{ asset('js/jquery-ui-min.js') }}"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 @stack('scripts')
 <script>
     jQuery(window).load(function () {
@@ -139,6 +141,9 @@
 
     })
     
+</script>
+<script>
+  AOS.init();
 </script>
 </body>
 </html>
