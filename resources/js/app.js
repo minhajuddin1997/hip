@@ -5270,6 +5270,7 @@ if (document.getElementById("slider-list")) {
 }
 let js_success = data => Vue.swal("Thank you!",data,"success");
 let js_error = data => Vue.swal("Error!",data,"error");
+
 if (document.getElementById("signUp")) {
     var form = document.getElementById('signUpForm');
     form.addEventListener('submit', event => {
@@ -5283,6 +5284,26 @@ if (document.getElementById("signUp")) {
                     js_success(response.data.msg);
                     form.reset();
                     document.getElementById('signUpButton').disabled = false;
+                }
+            }).catch(error => console.log(error));
+    });
+}
+
+
+
+if (document.getElementById("getStarted")) {
+    var form = document.getElementById('getStartedForm');
+    form.addEventListener('submit', event => {
+        event.preventDefault();
+        document.getElementById('getStartedButton').disabled = true;
+        axios.post(APP_URL + '/get-started',new FormData(form))
+            .then((response) => {
+                if (response.status === 200)
+                {
+                    window.jQuery('div#getStarted button.close').trigger('click');
+                    js_success(response.data.msg);
+                    form.reset();
+                    document.getElementById('getStartedButton').disabled = false;
                 }
             }).catch(error => console.log(error));
     });

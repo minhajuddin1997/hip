@@ -59,7 +59,10 @@
                                     </li>
                                 </ul>
                                 <div class="wt-btnarea" v-if="role !== 'admin'">
-                                    <a :href="baseUrl+'/user/package/checkout/' + pkgItem.id" class="wt-btntwo">{{ trans('lang.buy_now') }}</a>
+                                  
+                                            <!-- <a :href="baseUrl+'/user/package/checkout/' + pkgItem.id" class="wt-btntwo">{{ trans('lang.buy_now') }}</a>  --> 
+
+                                   <a href="javascript:void(0);" class="wt-btntwo" data-target="#getStarted" data-toggle="modal" > Get Started </a>                                    
                                 </div>
                             </div>
                         </div>
