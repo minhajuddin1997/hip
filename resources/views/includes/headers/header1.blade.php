@@ -105,38 +105,38 @@
                     @csrf
                     <fieldset>
                         <div class="form-group form-group-half">
-                            <input id="first_name" type="text" name="first_name" class="form-control{{ $errors->has('first_name') ? ' is-invalid' : '' }}"
-                                   placeholder="{{{ trans('lang.ph_first_name') }}}" required autofocus>
-                            @if ($errors->has('first_name'))
+                            <input id="gs_first_name" type="text" name="gs_first_name" class="form-control{{ $errors->has('gs_first_name') ? ' is-invalid' : '' }}"
+                                   placeholder="First Name" required autofocus>
+                            @if ($errors->has('gs_first_name'))
                                 <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $errors->first('first_name') }}</strong>
+                                    <strong>{{ $errors->first('gs_first_name') }}</strong>
                                 </span>
                             @endif
                         </div>
                         <div class="form-group form-group-half">
-                            <input id="last_name" type="text" name="last_name" class="form-control{{ $errors->has('last_name') ? ' is-invalid' : '' }}"
-                                   placeholder="{{{ trans('lang.ph_last_name') }}}" required autofocus>
-                            @if ($errors->has('last_name'))
+                            <input id="gs_last_name" type="text" name="gs_last_name" class="form-control{{ $errors->has('gs_last_name') ? ' is-invalid' : '' }}"
+                                   placeholder="Last Name" required autofocus>
+                            @if ($errors->has('gs_last_name'))
                                 <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $errors->first('last_name') }}</strong>
+                                                        <strong>{{ $errors->first('gs_last_name') }}</strong>
                                                     </span>
                             @endif
                         </div>
                         <div class="form-group">
-                            <input id="email" type="email" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
-                                   placeholder="{{{ trans('lang.ph_email') }}}" required autofocus>
-                            @if ($errors->has('email'))
+                            <input id="email" type="email" name="gs_email" class="form-control{{ $errors->has('gs_email') ? ' is-invalid' : '' }}"
+                                   placeholder="Email" required autofocus>
+                            @if ($errors->has('gs_email'))
                                 <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $errors->first('email') }}</strong>
+                                                        <strong>{{ $errors->first('gs_email') }}</strong>
                                                     </span>
                             @endif
                         </div>
                         <div class="form-group">
-                            <input id="phone" type="text" name="phone" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}"
+                            <input id="gs_phone" type="text" name="gs_phone" class="form-control{{ $errors->has('gs_phone') ? ' is-invalid' : '' }}"
                                    placeholder="Phone" required autofocus>
-                            @if ($errors->has('phone'))
+                            @if ($errors->has('gs_phone'))
                                 <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $errors->first('phone') }}</strong>
+                                                        <strong>{{ $errors->first('gs_phone') }}</strong>
                                                     </span>
                             @endif
                         </div>
@@ -145,11 +145,11 @@
                         <div class="form-group">
                             
 
-                                   <textarea placeholder="Message"  id="message" type="text" name="message" class="form-control{{ $errors->has('message') ? ' is-invalid' : '' }}"
+                                   <textarea placeholder="Message"  id="gs_message" type="text" name="gs_message" class="form-control{{ $errors->has('gs_message') ? ' is-invalid' : '' }}"
                                     required autofocus  cols="30" rows="10"> </textarea>
-                            @if ($errors->has('phone'))
+                            @if ($errors->has('gs_message'))
                                 <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $errors->first('message') }}</strong>
+                                                        <strong>{{ $errors->first('gs_message') }}</strong>
                                                     </span>
                             @endif
                         </div>

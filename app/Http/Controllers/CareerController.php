@@ -153,7 +153,7 @@ class CareerController extends Controller
             
         //For Skills
         
-        if (!empty($request->file('skill'))) {
+        if (!empty($request->input('skill'))) {
             DB::delete('delete from skill_user where user_id = ?', [$user->id]);
             foreach($request->input('skill') as $skill ){
               DB::insert('insert into skill_user (skill_id, skill_rating, user_id) values (?, ?, ?)', [$skill[0], $request->input('rating')[$skill[0]][0],$user->id]);
