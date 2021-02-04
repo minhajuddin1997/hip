@@ -93,7 +93,7 @@
 <!-- Get Started -->
 <div class="modal fade" id="getStarted" tabindex="-1" role="dialog" aria-labelledby="signUpTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+        <div class="modal-content pkg-bg">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitle"> Get Started</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -146,7 +146,7 @@
                             
 
                                    <textarea placeholder="Message"  id="gs_message" type="text" name="gs_message" class="form-control{{ $errors->has('gs_message') ? ' is-invalid' : '' }}"
-                                    required autofocus  cols="30" rows="10"> </textarea>
+                                    required autofocus  cols="30" rows="3"></textarea>
                             @if ($errors->has('gs_message'))
                                 <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $errors->first('gs_message') }}</strong>

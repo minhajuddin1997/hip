@@ -129,7 +129,13 @@ input[type="color"],
 .form-group textarea::placeholder{color: #999;}
 textarea.form-control{
 	resize: none;
-	height: 210px;
+}
+.modal-content,
+.wt-loginformhold {
+    background: url(../images/large.png) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
 }
 .form-control::-webkit-input-placeholder { color: #999; } /* WebKit, Blink, Edge */
 .form-control:-moz-placeholder { color: #999; } /* Mozilla Firefox 4 to 18 */
@@ -2725,6 +2731,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	float: left;
 	width: 100%;
 	list-style:none;
+	background-color: #fff;
 }
 .wt-accordionhold li{
 	float: left;
@@ -11244,4 +11251,8 @@ section.packages-bg.wt-main-section.wt-packages-wrap
 .wt-navigationarea.nav-1 {
     background: #323232;
     position: relative;
+}
+.whip .wt-description {
+    padding-left: 60px;
+    padding-right: 60px;
 }
