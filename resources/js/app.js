@@ -5273,6 +5273,10 @@ let js_error = data => Vue.swal("Error!",data,"error");
 
 if (document.getElementById("signUp")) {
     var form = document.getElementById('signUpForm');
+    
+    console.log(form);
+    alert(1);
+    
     form.addEventListener('submit', event => {
         event.preventDefault();
         document.getElementById('signUpButton').disabled = true;
@@ -5283,7 +5287,7 @@ if (document.getElementById("signUp")) {
                     window.jQuery('div#signUp button.close').trigger('click');
                     js_success(response.data.msg);
                     form.reset();
-                    document.getElementById('signUpButton').disabled = false;
+                    //document.getElementById('signUpButton').disabled = false;
                 }
             }).catch(error => console.log(error));
     });

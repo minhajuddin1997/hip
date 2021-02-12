@@ -67,8 +67,17 @@
                 .wt-header .wt-navigation>ul>.menu-item-has-children:after, .wt-header .wt-navigation > ul > li > a
                 color: #767676 !important;
             }
-        }       
-        
+        }  
+        .wt-title,
+        .wt-reportdescription {
+            padding: 10px 30px !important;
+        }
+        .wt-description {
+            margin: 10px auto;
+        }
+        .wt-freelancer-head {
+            min-height: 200px;
+        }
     </style>
     @stack('stylesheets')
     <script type="text/javascript">

@@ -60,7 +60,7 @@ class EmailHelper extends Model
     {
         ob_start();
         $setting = SiteManagement::getMetaValue('footer_settings');
-        $copyright = !empty($setting) && !empty($setting['copyright']) ? $setting['copyright'] : 'Copyright Worketic All Rights Reserved';
+        $copyright = !empty($setting) && !empty($setting['copyright']) ? $setting['copyright'] : 'Copyright HIP All Rights Reserved';
         ?>
         </div>
         </div>
@@ -85,7 +85,7 @@ class EmailHelper extends Model
     public static function getSiteTitle()
     {
         $settings = SiteManagement::getMetaValue('settings');
-        $title = !empty($settings) && !empty($settings[0]['title']) ? $settings[0]['title'] : 'Worketic';
+        $title = !empty($settings) && !empty($settings[0]['title']) ? $settings[0]['title'] : 'HIP';
         return $title;
     }
 
@@ -148,9 +148,9 @@ class EmailHelper extends Model
     {
         ob_start();
         $setting = SiteManagement::getMetaValue('email_data');
-        $sender_name = !empty($setting) && !empty($setting[0]['sender_name']) ? $setting[0]['sender_name'] : 'Worketic';
-        $sender_tagline = !empty($setting) && !empty($setting[0]['sender_tagline']) ? $setting[0]['sender_tagline'] : 'Worketic A Better Workplace for Employers and Freelancers';
-        $sender_url = !empty($setting) && !empty($setting[0]['sender_url']) ? $setting[0]['sender_url'] : 'URL';
+        $sender_name = !empty($setting) && !empty($setting[0]['sender_name']) ? $setting[0]['sender_name'] : 'HIP';
+        $sender_tagline = !empty($setting) && !empty($setting[0]['sender_tagline']) ? $setting[0]['sender_tagline'] : 'HIP A Better Workplace for Employers and Freelancers';
+        $sender_url = !empty($setting) && !empty($setting[0]['sender_url']) ? $setting[0]['sender_url'] : 'https://hireinpakistan.com/';
         ?>
         <div style="width: 100%; float: left; padding: 15px 0 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;">
             <div style="float: left; border-radius: 5px; overflow: hidden; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;">
